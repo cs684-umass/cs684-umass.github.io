@@ -1,0 +1,287 @@
+\documentclass[11pt]{article}
+
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+
+\usepackage[margin=1in]{geometry}
+\usepackage{array}
+\usepackage{longtable}
+\usepackage{enumitem}
+\usepackage[normalem]{ulem}
+\usepackage[colorlinks=true, linkcolor=blue, urlcolor=blue]{hyperref}
+
+\setlist[itemize]{noitemsep, topsep=0pt}
+\newcommand{\link}[2]{\href{#1}{\uline{#2}}}
+
+\title{Course Syllabus: \textbf{COMPSCI 690: Trustworthy and Responsible AI (TRAI)}}
+\author{University of Massachusetts Amherst}
+\date{\textbf{Fall 2025}}
+
+\begin{document}
+\maketitle
+
+\begin{center}
+\textit{Last updated Jan 2026}
+\end{center}
+
+\section*{Course Overview}
+\begin{tabular}{@{}>{\bfseries}p{2.1in}p{4.2in}@{}}
+Course Number and Title & COMPSCI 690 (CS 690): Trustworthy and Responsible AI (TRAI) \\
+Credits & 3 \\
+Instructional Contact Hours per Week & In-person: 2.5 hours/week (Mon/Wed 2:30 PM--3:45 PM). Live online: N/A. \\
+Delivery Mode (in-person / online / flex) & In-person (Computer Science Building, Room 142) \\
+Course Description & In the era of intelligent assistants, autonomous agents, and self-driving cars we expect AI systems to not cause harm and withstand adversarial attacks. In this course you will learn advanced methods of building AI models and systems that mitigate privacy, security, societal, and environmental risks. We will go deep into attack vectors and what type of guarantees current research can and cannot provide for modern generative models. The course will feature extensive hands-on experience with model training and regular discussion of key research papers. \textbf{Students are required to have taken NLP, general ML, and security classes before taking this course.} \\
+\end{tabular}
+
+\section*{People}
+\begin{tabular}{@{}>{\bfseries}p{2.1in}p{4.2in}@{}}
+Instructor Name & \link{https://people.cs.umass.edu/~eugene/}{Eugene Bagdasarian} \\
+Instructor Contact & Website: \link{https://people.cs.umass.edu/~eugene/}{Faculty page}; Office: CS 304; Appointment link: \link{https://calendar.app.google/4Hc4KpSgxhSZHyYH8}{Appointment calendar}. 
+Email: \link{mailto:eugene@umass.edu}{eugene@umass.edu}. \\
+Appointment Hours & Wed 4--5 PM by appointment (CS 304) \\
+Teaching Assistants (if any) & June Jeong -- \link{https://hyejunjeong.github.io/}{Website}; Office: CS 207; Appointment link: \link{https://calendar.app.google/nV4TxaSR2MAPB6Es6}{Appointment calendar}; Office hours: Fri 2--4 PM by appointment \\
+\end{tabular}
+
+\section*{Student Learning Objectives}
+\begin{itemize}
+  \item Analyze privacy, security, societal, and environmental risks in AI systems and identify limits of current guarantees.
+  \item Implement and evaluate attacks and defenses (e.g., membership inference, training-data extraction, differential privacy, federated learning, jailbreaks, backdoors, alignment attacks).
+  \item Design and assess a realistic AI startup system, including threat models and mitigation strategies.
+  \item Critically read, present, and synthesize research papers relevant to trustworthy and responsible AI.
+\end{itemize}
+
+\section*{Course Materials}
+\begin{itemize}
+  \item Required readings: posted in the syllabus schedule and/or linked from course materials (primarily research papers).
+  \item Recommended: a laptop capable of running Python and common ML tooling.
+  \item Platforms/tools: GitHub (team repos), Gradescope (submissions), Google Slides (shared class deck), and LaTeX/Overleaf (final report template).
+\end{itemize}
+
+\section*{Course Expectations}
+\begin{itemize}
+  \item Attendance, required reading, and participation are expected.
+  \item Team-based weekly work: paper discussion + implementation/experiments.
+  \item A team final project (startup + threat model + empirical evaluation).
+  \item All demonstrations and artifacts must use synthetic or sanitized data; do not use real PII in submissions or demos.
+\end{itemize}
+
+\section*{Assignments}
+\begin{itemize}
+  \item Ten team-based assignments aligned with weekly themes (privacy, security, societal and environmental risks).
+  \item Each assignment typically includes: (i) reading report, (ii) code/experiments, (iii) short slide presentation.
+  \item Unless otherwise specified, submissions are due Friday 11:59 PM ET of the relevant week.
+\end{itemize}
+
+\subsection*{Assignment Themes and Dates}
+\begin{itemize}
+  \item A1 (Week 3): Synthetic dataset + MIA / extraction (Due Fri Sep 19)
+  \item A2 (Week 4): Federated learning (Due Fri Sep 26)
+  \item A3 (Week 5): Differential privacy (Due Fri Oct 3)
+  \item A4 (Week 6): PII filtering (Due Fri Oct 10)
+  \item A5 (Week 7): Contextual integrity / privacy agents (Due Fri Oct 17)
+  \item A6 (Week 8): Jailbreaks + prompt injection (Due Fri Oct 24)
+  \item A7 (Week 9): Multi-modal attacks (Due Fri Oct 31)
+  \item A8 (Week 10): Backdoors + watermarking (Due Fri Nov 7)
+  \item A9 (Week 11): Alignment attacks + interventions (Due Fri Nov 14)
+  \item A10 (Week 12): Resource overhead / abuse attacks (Due Fri Nov 21)
+\end{itemize}
+\textit{Presentation day for Assignments 4--6: Wed Oct 22.}
+
+\section*{Group Project}
+\subsection*{Project Overview}
+\begin{itemize}
+  \item You will design an AI startup and try to defend it against attacks.
+  \item Pre-requisites:
+  \begin{itemize}
+    \item You need to operate on customer data (users, companies).
+    \item Your product should use LLMs.
+    \item Your product operates with external parties (customers, vendors).
+  \end{itemize}
+  \item Example projects: customer support bot, AI tutor, business assistant.
+  \item Throughout the semester you will add privacy and security features, building a comprehensive analysis of your project.
+  \item Pick one research topic and write an extensive research report.
+  \item Track your own contributions through Git commits (code and reports).
+\end{itemize}
+
+\subsection*{Mid-Semester Presentations (Wed Oct 8)}
+\begin{itemize}
+  \item Format: short presentations by each team (6 min + 2 min Q\&A).
+  \item What to cover: project title/tagline, problem motivation, data handled, threat model/research question, experiment plan, planned defenses, open questions.
+  \item Slides: add to the shared class deck before class.
+  \item Policy: use only synthetic/sanitized examples; no real PII on slides or demos.
+\end{itemize}
+
+\subsection*{Project Proposal (Fri Oct 10)}
+\begin{itemize}
+  \item Submit the 1-page proposal by Fri Oct 10 (EOD), incorporating in-class feedback.
+\end{itemize}
+
+\subsection*{Final Report and Poster}
+\begin{itemize}
+  \item When:
+  \begin{itemize}
+    \item Poster: Dec 2 via \link{https://docs.google.com/forms/d/e/1FAIpQLScsDsRuQEsYbIouAo6meFJH_LmSatFAEXdKIDx7OClzgufe5g/viewform?usp=dialog}{Google Form}
+    \item Report: Dec 15 via Gradescope.
+  \end{itemize}
+  \item \textbf{NO LATE SUBMISSIONS ALLOWED.}
+  \item Report requirements:
+  \begin{itemize}
+    \item At least 8 full pages (not counting references).
+    \item Use the provided LaTeX template (\link{https://www.overleaf.com/read/xmmtpvfkwbtm\#eff0e0}{Overleaf} / \link{https://github.com/ebagdasa/umass_aisec_tempate}{GitHub}); do not modify font size/type or margins.
+    \item Figures and tables must not exceed 25\% of total pages.
+    \item Minimum of 15 references using BibTeX.
+    \item Suggested structure: Introduction, Threat Model, Attack/Defense Methodology, Experiment Setup, Results, Discussion, Conclusion.
+  \end{itemize}
+  \item Poster requirements:
+  \begin{itemize}
+    \item One A1-size poster per team summarizing your project and key findings.
+    \item Readable from \textasciitilde1.5 meters; high-resolution figures; include: Title, Authors, Introduction, Methodology, Results, Conclusion, References.
+    \item Other resources: NeurIPS posters \link{https://drive.google.com/drive/u/1/folders/16tSJGJryd7NgQCBblaKxTfXLZXDIJJrt}{Google Drive}, and \link{https://github.com/zhoubolei/bolei_awesome_posters}{Bolei poster repo}.
+  \end{itemize}
+  \item Use of AI: you may use AI tools for wording, phrasing, and LaTeX assistance, but all research ideas must be original. You are the first author of your report.
+\end{itemize}
+
+\section*{Course Requirements and Grade Weights}
+\begin{itemize}
+  \item \textbf{Attendance and participation:} 10\% (you may miss up to 4 class meetings without penalty; see Attendance Policy).
+  \item \textbf{Assignments (10 total; slides + short report + code):} 40\% total (each assignment is worth 4\%).
+  \item \textbf{Final project:} 50\%, broken down as:
+  \begin{itemize}
+    \item 1-page proposal: 10\%
+    \item Mid-semester presentation: 5\%
+    \item Final report: 20\%
+    \item Final presentation (poster session): 15\%
+  \end{itemize}
+  \item \textbf{Optional bonus:} up to 5\% for active participation, excellent implementations, and exceptional presentation quality.
+\end{itemize}
+\textbf{Total: 100\%} (plus optional bonus)
+
+\section*{Grading Scale}
+\begin{center}
+\begin{tabular}{|c|c||c|c|}
+\hline
+\textbf{Grade} & \textbf{Range} & \textbf{Grade} & \textbf{Range} \\
+\hline
+A & 95--100 & B & 83--86 \\
+A- & 90--94 & B- & 80--82 \\
+B+ & 87--89 & C+ & 77--79 \\
+C & 73--76 & C- & 70--72 \\
+D+ & 67--69 & D & 63--66 \\
+F & 0--62 & & \\
+\hline
+\end{tabular}
+\end{center}
+\noindent\textit{Note: Letter-grade cutoffs are applied to the percentage earned.}
+
+\section*{Course Schedule}
+{\small
+\setlength{\tabcolsep}{5pt}
+\begin{longtable}{|p{0.9in}|p{1.1in}|p{2.0in}|p{1.8in}|}
+\hline
+\textbf{Week} & \textbf{Date(s)} & \textbf{Topic} & \textbf{Notes} \\
+\hline
+\endfirsthead
+\hline
+\textbf{Week} & \textbf{Date(s)} & \textbf{Topic} & \textbf{Notes} \\
+\hline
+\endhead
+Week 1 & Sep 3 & Intro + project formation & Bonus startup ideas. \\
+\hline
+Week 2 & Sep 8, Sep 10 & Privacy: overview + MIA & A1 released. \\
+\hline
+Week 3 & Sep 15, Sep 17 & Training data attacks + federated learning & Add/drop (Grad); A1 due Sep 19; A2 released. \\
+\hline
+Week 4 & Sep 22, Sep 24 & Differential privacy (basics + advanced) & A2 due Sep 26; A3 released. \\
+\hline
+Week 5 & Sep 29, Oct 1 & PII filtering + contextual integrity & A3 due Oct 3; A4 released. \\
+\hline
+Week 6 & Oct 6, Oct 8 & Guest talk + mid-semester presentations & Proposal + A4 due Oct 10. \\
+\hline
+Week 7 & Oct 13, Oct 15 & Holiday + project work & A5 due Oct 17; A6 released. \\
+\hline
+Week 8 & Oct 20, Oct 22 & Jailbreaks + assignment presentations & A6 due Oct 24. \\
+\hline
+Week 9 & Oct 27, Oct 29 & Multi-modal attacks + backdoors & A7 due Oct 31; A8 released. \\
+\hline
+Week 10 & Nov 3, Nov 5 & Watermarks + alignment attacks & A8 due Nov 7; A9 released. \\
+\hline
+Week 11 & Nov 10, Nov 12 & Principled defenses + fairness & A9 due Nov 14. \\
+\hline
+Week 12 & Nov 17, Nov 19 & Overthinking + misinformation & A10 due Nov 21. \\
+\hline
+Week 13 & Nov 24, Nov 25 & Optional class + Thanksgiving recess & Final report/poster instructions. \\
+\hline
+Week 14 & Dec 1, Dec 3 & Guest lectures & None. \\
+\hline
+Week 15 & Dec 8 & Final project poster session & Final report due Dec 15 (see Project section). \\
+\hline
+\end{longtable}
+}
+
+\section*{Attendance Policy}
+Attendance and participation are required. You may miss up to \textbf{four} class meetings without penalty. If you expect to miss more than four meetings due to illness, travel restrictions, or emergencies, contact the teaching staff as early as possible. Required reading is expected for each class session.
+
+\section*{Late or Make-up Work Policies}
+\begin{itemize}
+  \item \textbf{Late days:} Each assignment includes \textbf{two late days} (each late day = 24 hours) that may be used without penalty.
+  \item \textbf{No banking:} Late days do not accumulate across assignments; unused late days expire.
+  \item \textbf{After late days:} Submissions beyond the allowed late days will not be accepted except in documented emergencies or with prior arrangements approved by the instructor.
+  \item \textbf{Make-up work:} Make-up work is generally not offered. If you must miss an in-class requirement due to illness or an emergency, contact the instructor as soon as possible.
+\end{itemize}
+
+\section*{Required Syllabus Statements}
+University policies regarding \textbf{Accommodations}, \textbf{Academic Integrity}, and \textbf{Title IX} apply to all courses. The required statements are provided below. These statements are also maintained by the Faculty Senate at: \link{https://www.umass.edu/senate/book/non-responsible-employee-required-syllabus-statements}{required syllabus statements}.\footnote{That page indicates that the instructor for this course is not a ``responsible employee'' for Title IX reporting purposes.}
+
+\subsection*{Academic Integrity (Course-Specific Expectations)}
+This course involves significant \textbf{team-based work}. Collaboration \textbf{within your assigned team} is expected. However:
+\begin{itemize}
+  \item Your team must produce original writing and code for all submissions.
+  \item When you use external sources (papers, articles, code, libraries, datasets, etc.), you must provide appropriate attribution (citations and links) in your report and in code comments or README as appropriate.
+  \item You may discuss high-level ideas with others outside your team, but you may not share or reuse substantial solution text, code, or experimental results across teams.
+  \item Misrepresentation of individual contribution or unauthorized assistance is prohibited.
+\end{itemize}
+If you are uncertain about what constitutes appropriate collaboration or attribution for a particular assignment, ask the teaching staff before submitting.
+
+\subsection*{Academic Integrity Statement (Effective Fall 2025)}
+UMass Amherst is strongly committed to academic integrity, which is defined as completing all academic work without cheating, lying, stealing, or receiving unauthorized assistance from any other person, or using any source of information not appropriately authorized or attributed. As a community, we hold each other accountable and support each other’s knowledge and understanding of academic integrity. Academic dishonesty is prohibited in all programs of the University and includes but is not limited to: Cheating, fabrication, plagiarism, lying, and facilitating dishonesty, via analogue and digital means. Sanctions may be imposed on any student who has committed or participated in an academic integrity infraction. Any person who has reason to believe that a student has committed an academic integrity infraction should bring such information to the attention of the appropriate course instructor as soon as possible. All students at the University of Massachusetts Amherst have read and acknowledged the Commitment to Academic Integrity and are knowingly responsible for completing all work with integrity and in accordance with the policy: (\link{https://www.umass.edu/senate/book/academic-regulations-academic-integrity-policy}{Academic Integrity Policy})
+
+\subsection*{Accommodation Statement}
+The University of Massachusetts Amherst is committed to making reasonable, effective, and appropriate accommodations to meet the needs of students with disabilities and help create a barrier-free campus. If you have a disability and require accommodations, please register with Disability Services, meet with an Access Coordinator in Disability Services, and send your accommodation letter to your faculty. Information on services and registration is available on the Disability Services website (\link{https://www.umass.edu/disability/}{Disability Services}).
+
+\subsection*{Title IX Statement (Non-Responsible Employee)}
+Title IX Statement
+In accordance with Title IX of the Education Amendments of 1972 that prohibits gender-based discrimination in educational settings that receive federal funds, the University of Massachusetts Amherst is committed to providing a safe learning environment for all students, free from all forms of discrimination, including sexual assault, sexual harassment, domestic violence, dating violence, stalking, and retaliation. This includes interactions in person or online through digital platforms and social media.
+Title IX also protects against discrimination on the basis of pregnancy, childbirth, false pregnancy, miscarriage, abortion, or related conditions, including recovery. There are resources here on campus to support you. A summary of the available Title IX resources (confidential and non-confidential) can be found at the following link: \link{https://www.umass.edu/titleix/resources}{Title IX resources}. You do not need to make a formal report to access them. If you need immediate support, you are not alone.
+Free and confidential support is available 24 hours a day / 7 days a week / 365 days a year at the SASA Hotline 413-545-0800.
+
+\section*{Additional Recommended Statements (Guidelines)}
+\subsection*{Inclusive Language (Nondiscrimination Policy)}
+This course is committed to fostering an inclusive and respectful learning environment. All students are welcome, regardless of age, background, citizenship, disability, education, ethnicity, family status, gender, gender identity or expression, national origin, language, military experience, political views, race, religion, sexual orientation, socioeconomic status, or work experience. Our collective learning benefits from the diversity of perspectives and experiences that students bring. Any language or behavior that demeans, excludes, or discriminates against members of any group is inconsistent with the mission of this course and will not be tolerated. \\
+Reference: \link{https://www.umass.edu/ctl/resources/how-do-i/how-do-i-write-inclusive-syllabus}{Inclusive syllabus guide}
+
+\subsection*{Pronoun Statement}
+Everyone in this course has the right to be addressed by the name and pronouns that reflect their identity. Students are able to choose their name and pronouns in SPIRE, which will appear on class rosters. Please let the instructor or teaching staff know if you wish to be referred to using a name or pronouns different from those listed in official University records. The teaching staff will make a good-faith effort to use correct names and pronouns; mistakes should be corrected respectfully. Intentional or repeated misuse of names or pronouns is inconsistent with the expectations of this course.
+
+\subsection*{Land Acknowledgment}
+The University of Massachusetts Amherst is located on lands traditionally stewarded by the Nipmuc and Pocumtuc peoples. We acknowledge their presence, history, and continued connection to this land. This acknowledgement is offered as a starting point for awareness and reflection, and does not replace meaningful engagement with Indigenous communities or issues.
+
+\subsection*{Classroom Civility \& Respect}
+We will maintain a respectful learning environment that supports open inquiry, constructive critique, and professional conduct. Students are expected to engage with course material and with each other in a collegial manner. Disruptive behavior or conduct that interferes with teaching and learning may be addressed in accordance with University policies. \\
+Reference: \link{https://www.umass.edu/dean_students/campus-policies/classroom}{Classroom civility policy}
+
+\subsection*{Student Success Resources}
+If you would like additional academic or personal support, UMass Amherst provides many free resources, including:
+\begin{itemize}
+  \item \textbf{Learning Resource Center (LRC):} tutoring, study skills support, and related services (\link{https://www.umass.edu/lrc/}{LRC site}).
+  \item \textbf{Writing Center:} one-on-one writing support for drafts, revisions, and research writing (\link{https://www.umass.edu/writing-center/}{Writing Center site}).
+  \item \textbf{UMass Amherst Libraries:} research help, reserves, and learning support (\link{https://www.library.umass.edu/}{Libraries site}).
+  \item \textbf{Undergraduate Student Success Center:} campus-wide student success resources and support (\link{https://www.umass.edu/studentsuccess/}{Student Success Center site}).
+\end{itemize}
+
+\subsection*{Generative AI Policy}
+You may use AI tools to help with reading, brainstorming, debugging, and drafting. However, you must fully understand and be able to explain any submitted material (including code) and remain responsible for correctness and originality of ideas. Unless explicitly authorized for a specific deliverable, you should treat generative AI as a writing assistant and programming assistant---not as a substitute for doing the work. For each report, include a short \textit{How I used AI} section describing what tools you used and for what purpose. The default university position is that generative AI tools are forbidden for the generation of submitted work unless explicitly stated otherwise; this course explicitly allows the uses described in this section.
+
+\subsection*{Communication Outside of Class}
+Official announcements will be made in class and/or via the course communication channels (e.g., Moodle/Gradescope/Slack, as applicable). For private questions, contact the instructor or the TA by email (Eugene's email is \link{mailto:eugene@umass.edu}{eugene@umass.edu}). Please allow up to \textbf{two business days} for a response during the semester; response times may be longer on weekends, holidays, or during high-volume grading periods. If your message is urgent, include \textbf{URGENT} in the subject line and briefly explain the time sensitivity.
+
+\end{document}

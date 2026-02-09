@@ -7,6 +7,7 @@
 \usepackage{array}
 \usepackage{longtable}
 \usepackage{enumitem}
+\usepackage{booktabs}
 \usepackage[normalem]{ulem}
 \usepackage[colorlinks=true, linkcolor=blue, urlcolor=blue]{hyperref}
 
@@ -30,7 +31,7 @@ Course Number and Title & COMPSCI 690 (CS 690): Trustworthy and Responsible AI (
 Credits & 3 \\
 Instructional Contact Hours per Week & In-person: 2.5 hours/week (Mon/Wed 2:30 PM--3:45 PM). Live online: N/A. \\
 Delivery Mode (in-person / online / flex) & In-person (Computer Science Building, Room 142) \\
-Course Description & In the era of intelligent assistants, autonomous agents, and self-driving cars we expect AI systems to not cause harm and withstand adversarial attacks. In this course you will learn advanced methods of building AI models and systems that mitigate privacy, security, societal, and environmental risks. We will go deep into attack vectors and what type of guarantees current research can and cannot provide for modern generative models. The course will feature extensive hands-on experience with model training and regular discussion of key research papers. \textbf{Students are required to have taken NLP, general ML, and security classes before taking this course.} \\
+Course Description & In the era of intelligent assistants, autonomous agents, and self-driving cars we expect AI systems to not cause harm and withstand adversarial attacks. In this course you will learn advanced methods of building AI models and systems that mitigate privacy, security, societal, and environmental risks. We will go deep into attack vectors and what type of guarantees current research can and cannot provide for modern generative models. The course will feature extensive hands-on experience with model training and regular discussion of key research papers. \textbf{The course will operate under the assumption that students have previously taken NLP, general ML, and security classes before taking this course.} \\
 \end{tabular}
 
 \section*{People}
@@ -158,17 +159,22 @@ Teaching Assistants (if any) & June Jeong -- \link{https://hyejunjeong.github.io
 
 \section*{Grading Scale}
 \begin{center}
-\begin{tabular}{|c|c||c|c|}
-\hline
-\textbf{Grade} & \textbf{Range} & \textbf{Grade} & \textbf{Range} \\
-\hline
-A & 95--100 & B & 83--86 \\
-A- & 90--94 & B- & 80--82 \\
-B+ & 87--89 & C+ & 77--79 \\
-C & 73--76 & C- & 70--72 \\
-D+ & 67--69 & D & 63--66 \\
-F & 0--62 & & \\
-\hline
+\begin{tabular}{cc}
+\toprule
+\textbf{Grade} & \textbf{Range} \\
+\midrule
+A & 93--100\\
+A- & 90--92\\
+B+ & 87--89 \\
+B & 83--86 \\ 
+B- & 80--82 \\
+C+ & 77--79 \\
+C & 73--76  \\ 
+C- & 70--72 \\
+D+ & 67--69 \\
+D & 63--66 \\
+F & 0--62 \\
+\bottomrule
 \end{tabular}
 \end{center}
 \noindent\textit{Note: Letter-grade cutoffs are applied to the percentage earned.}
@@ -176,45 +182,28 @@ F & 0--62 & & \\
 \section*{Course Schedule}
 {\small
 \setlength{\tabcolsep}{5pt}
-\begin{longtable}{|p{0.9in}|p{1.1in}|p{2.0in}|p{1.8in}|}
-\hline
+\begin{longtable}{p{0.9in}p{1.1in}p{2.0in}p{1.8in}}
+\toprule
 \textbf{Week} & \textbf{Date(s)} & \textbf{Topic} & \textbf{Notes} \\
-\hline
-\endfirsthead
-\hline
+\midrule
+
 \textbf{Week} & \textbf{Date(s)} & \textbf{Topic} & \textbf{Notes} \\
-\hline
-\endhead
 Week 1 & Sep 3 & Intro + project formation & Bonus startup ideas. \\
-\hline
 Week 2 & Sep 8, Sep 10 & Privacy: overview + MIA & A1 released. \\
-\hline
 Week 3 & Sep 15, Sep 17 & Training data attacks + federated learning & Add/drop (Grad); A1 due Sep 19; A2 released. \\
-\hline
 Week 4 & Sep 22, Sep 24 & Differential privacy (basics + advanced) & A2 due Sep 26; A3 released. \\
-\hline
 Week 5 & Sep 29, Oct 1 & PII filtering + contextual integrity & A3 due Oct 3; A4 released. \\
-\hline
 Week 6 & Oct 6, Oct 8 & Guest talk + mid-semester presentations & Proposal + A4 due Oct 10. \\
-\hline
 Week 7 & Oct 13, Oct 15 & Holiday + project work & A5 due Oct 17; A6 released. \\
-\hline
 Week 8 & Oct 20, Oct 22 & Jailbreaks + assignment presentations & A6 due Oct 24. \\
-\hline
 Week 9 & Oct 27, Oct 29 & Multi-modal attacks + backdoors & A7 due Oct 31; A8 released. \\
-\hline
 Week 10 & Nov 3, Nov 5 & Watermarks + alignment attacks & A8 due Nov 7; A9 released. \\
-\hline
 Week 11 & Nov 10, Nov 12 & Principled defenses + fairness & A9 due Nov 14. \\
-\hline
 Week 12 & Nov 17, Nov 19 & Overthinking + misinformation & A10 due Nov 21. \\
-\hline
 Week 13 & Nov 24, Nov 25 & Optional class + Thanksgiving recess & Final report/poster instructions. \\
-\hline
 Week 14 & Dec 1, Dec 3 & Guest lectures & None. \\
-\hline
 Week 15 & Dec 8 & Final project poster session & Final report due Dec 15 (see Project section). \\
-\hline
+\bottomrule
 \end{longtable}
 }
 
@@ -229,10 +218,10 @@ Attendance and participation are required. You may miss up to \textbf{four} clas
   \item \textbf{Make-up work:} Make-up work is generally not offered. If you must miss an in-class requirement due to illness or an emergency, contact the instructor as soon as possible.
 \end{itemize}
 
-\section*{Required Syllabus Statements}
-University policies regarding \textbf{Accommodations}, \textbf{Academic Integrity}, and \textbf{Title IX} apply to all courses. The required statements are provided below. These statements are also maintained by the Faculty Senate at: \link{https://www.umass.edu/senate/book/non-responsible-employee-required-syllabus-statements}{required syllabus statements}.\footnote{That page indicates that the instructor for this course is not a ``responsible employee'' for Title IX reporting purposes.}
+\section*{Syllabus Statements}
+University policies regarding \textbf{Accommodations}, \textbf{Academic Integrity}, and \textbf{Title IX} are maintained by the Faculty Senate at: \link{https://www.umass.edu/senate/book/non-responsible-employee-required-syllabus-statements}{link}.
 
-\subsection*{Academic Integrity (Course-Specific Expectations)}
+\subsection*{Academic Integrity}
 This course involves significant \textbf{team-based work}. Collaboration \textbf{within your assigned team} is expected. However:
 \begin{itemize}
   \item Your team must produce original writing and code for all submissions.
@@ -254,16 +243,17 @@ In accordance with Title IX of the Education Amendments of 1972 that prohibits g
 Title IX also protects against discrimination on the basis of pregnancy, childbirth, false pregnancy, miscarriage, abortion, or related conditions, including recovery. There are resources here on campus to support you. A summary of the available Title IX resources (confidential and non-confidential) can be found at the following link: \link{https://www.umass.edu/titleix/resources}{Title IX resources}. You do not need to make a formal report to access them. If you need immediate support, you are not alone.
 Free and confidential support is available 24 hours a day / 7 days a week / 365 days a year at the SASA Hotline 413-545-0800.
 
-\section*{Additional Recommended Statements (Guidelines)}
+\section*{Additional Statements}
 \subsection*{Inclusive Language (Nondiscrimination Policy)}
 This course is committed to fostering an inclusive and respectful learning environment. All students are welcome, regardless of age, background, citizenship, disability, education, ethnicity, family status, gender, gender identity or expression, national origin, language, military experience, political views, race, religion, sexual orientation, socioeconomic status, or work experience. Our collective learning benefits from the diversity of perspectives and experiences that students bring. Any language or behavior that demeans, excludes, or discriminates against members of any group is inconsistent with the mission of this course and will not be tolerated. \\
-Reference: \link{https://www.umass.edu/ctl/resources/how-do-i/how-do-i-write-inclusive-syllabus}{Inclusive syllabus guide}
+Reference: \link{https://www.umass.edu/ctl/resources/how-do-i/how-do-i-write-inclusive-syllabus}{Inclusive syllabus guide}.
 
 \subsection*{Pronoun Statement}
 Everyone in this course has the right to be addressed by the name and pronouns that reflect their identity. Students are able to choose their name and pronouns in SPIRE, which will appear on class rosters. Please let the instructor or teaching staff know if you wish to be referred to using a name or pronouns different from those listed in official University records. The teaching staff will make a good-faith effort to use correct names and pronouns; mistakes should be corrected respectfully. Intentional or repeated misuse of names or pronouns is inconsistent with the expectations of this course.
 
 \subsection*{Land Acknowledgment}
-The University of Massachusetts Amherst is located on lands traditionally stewarded by the Nipmuc and Pocumtuc peoples. We acknowledge their presence, history, and continued connection to this land. This acknowledgement is offered as a starting point for awareness and reflection, and does not replace meaningful engagement with Indigenous communities or issues.
+The University of Massachusetts Amherst acknowledges that it was founded and built on the unceded homelands of the Pocumtuc Nation on the land of the Norrwutuck community. We acknowledge their presence, history, and continued connection to this land. This acknowledgement is offered as a starting point for awareness and reflection, and does not replace meaningful engagement with Indigenous communities or issues.
+Reference: \link{https://www.umass.edu/diversity/about/land-acknowledgement}{Land Acknlowledgment}. 
 
 \subsection*{Classroom Civility \& Respect}
 We will maintain a respectful learning environment that supports open inquiry, constructive critique, and professional conduct. Students are expected to engage with course material and with each other in a collegial manner. Disruptive behavior or conduct that interferes with teaching and learning may be addressed in accordance with University policies. \\
@@ -282,6 +272,6 @@ If you would like additional academic or personal support, UMass Amherst provide
 You may use AI tools to help with reading, brainstorming, debugging, and drafting. However, you must fully understand and be able to explain any submitted material (including code) and remain responsible for correctness and originality of ideas. Unless explicitly authorized for a specific deliverable, you should treat generative AI as a writing assistant and programming assistant---not as a substitute for doing the work. For each report, include a short \textit{How I used AI} section describing what tools you used and for what purpose. The default university position is that generative AI tools are forbidden for the generation of submitted work unless explicitly stated otherwise; this course explicitly allows the uses described in this section.
 
 \subsection*{Communication Outside of Class}
-Official announcements will be made in class and/or via the course communication channels (e.g., Moodle/Gradescope/Slack, as applicable). For private questions, contact the instructor or the TA by email (Eugene's email is \link{mailto:eugene@umass.edu}{eugene@umass.edu}). Please allow up to \textbf{two business days} for a response during the semester; response times may be longer on weekends, holidays, or during high-volume grading periods. If your message is urgent, include \textbf{URGENT} in the subject line and briefly explain the time sensitivity.
+Official announcements will be made in class and/or via the course Slack. For private questions, contact the instructor or the TA by email (Eugene's email is \link{mailto:eugene@umass.edu}{eugene@umass.edu}). Please allow up to \textbf{two business days} for a response during the semester; response times may be longer on weekends, holidays, or during high-volume grading periods. If your message is urgent, include \textbf{URGENT} in the subject line and briefly explain the time sensitivity.
 
 \end{document}

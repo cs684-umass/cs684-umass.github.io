@@ -1,1 +1,1 @@
-# umass-cs690f.githuib.io
+# cs684-umass.github.io

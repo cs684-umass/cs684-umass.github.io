@@ -54,6 +54,12 @@
       margin-bottom: 2rem;
     }
 
+    /* Offset anchor targets so the sticky navbar doesn't cover their header
+       when jumped to from the assignment sidebar (or any #hash link). */
+    [id^="week"] {
+      scroll-margin-top: 80px;
+    }
+
     .nav-container {
       display: flex;
       justify-content: center;

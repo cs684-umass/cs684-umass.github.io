@@ -218,6 +218,17 @@
     }
 
     @media screen and (max-width: 768px) {
+      .section-nav {
+        display: none;
+      }
+
+      /* No sticky nav bar to clear on mobile, so drop the offset reserved
+         for it (see the [id^="week"], #project rule above). */
+      [id^="week"],
+      #project {
+        scroll-margin-top: 0;
+      }
+
       .section {
         padding: 1.5rem 0.5rem;
       }
@@ -240,8 +251,9 @@
       /* The syllabus table has 6 columns of real content — even at a
          generous min-width it can't fit a phone screen, so it was forcing
          a horizontal scroll to read the last columns. Instead, drop the
-         table layout and stack each row into a labeled card: no
-         horizontal scroll, and each field stays fully readable. */
+         table layout and lay out each row as a compact card: a small
+         "Week · Class · Date" meta line, the topic as the headline, then
+         notes/assignments below — instead of one field per line. */
       .syllabus-table {
         min-width: 0;
       }
@@ -251,15 +263,18 @@
       }
 
       .syllabus-table,
-      .syllabus-table tbody,
-      .syllabus-table tr,
-      .syllabus-table td {
+      .syllabus-table tbody {
         display: block;
         width: 100%;
       }
 
       .syllabus-table tr {
-        padding: 0.6rem 0;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: baseline;
+        column-gap: 0.4rem;
+        row-gap: 0.25rem;
+        padding: 0.65rem 0;
       }
 
       .syllabus-table tr:not(:last-child) {
@@ -267,18 +282,22 @@
       }
 
       .syllabus-table td {
+        display: block;
+        width: auto;
         border: none;
-        padding: 0.2rem 0;
+        padding: 0;
       }
 
       .syllabus-table td:empty {
         display: none;
       }
 
+      /* Default label caption, used by Notes; overridden/removed below for
+         the other columns. */
       .syllabus-table td::before {
         content: attr(data-label);
         display: block;
-        font-size: 0.7rem;
+        font-size: 0.68rem;
         font-weight: 600;
         text-transform: uppercase;
         letter-spacing: 0.03em;
@@ -286,10 +305,63 @@
         margin-bottom: 0.1rem;
       }
 
-      /* Reading rows are a single self-explanatory cell (paper links or
-         "No reading") — the generic "Topic" label above it is just noise. */
-      .syllabus-table tr.reading-row td::before {
+      /* Week / Class # / Date share one compact meta line instead of each
+         getting their own labeled line. */
+      .syllabus-table td[data-label="Week"],
+      .syllabus-table td[data-label="Class #"],
+      .syllabus-table td[data-label="Date"] {
+        flex: 0 0 auto;
+        font-size: 0.78rem;
+        font-weight: 600;
+        color: var(--secondary-color);
+      }
+
+      .syllabus-table td[data-label="Week"]::before,
+      .syllabus-table td[data-label="Class #"]::before,
+      .syllabus-table td[data-label="Date"]::before {
         content: none;
+      }
+
+      .syllabus-table td[data-label="Week"]:not(:empty)+td[data-label="Class #"]:not(:empty)::before,
+      .syllabus-table td[data-label="Class #"]:not(:empty)+td[data-label="Date"]:not(:empty)::before {
+        content: "·";
+        display: inline;
+        margin-right: 0.4em;
+        color: var(--border-color);
+      }
+
+      /* Topic is the headline of the row. */
+      .syllabus-table td[data-label="Topic"] {
+        flex: 1 1 100%;
+        font-size: 0.95rem;
+        font-weight: 500;
+        color: var(--text-color);
+      }
+
+      .syllabus-table td[data-label="Topic"]::before {
+        content: none;
+      }
+
+      .syllabus-table td[data-label="Notes"] {
+        flex: 1 1 100%;
+        font-size: 0.85rem;
+        color: #555;
+      }
+
+      /* Release/due info is the row's call to action — call it out. */
+      .syllabus-table td[data-label="Links/Slides/Assignments"] {
+        flex: 1 1 100%;
+      }
+
+      .syllabus-table td[data-label="Links/Slides/Assignments"]::before {
+        content: "Assignments";
+      }
+
+      .syllabus-table td[data-label="Links/Slides/Assignments"]:not(:empty) {
+        background: var(--light-bg);
+        border-left: 3px solid var(--primary-color);
+        padding: 0.35rem 0.5rem;
+        border-radius: 4px;
       }
     }
 

@@ -5,10 +5,10 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>COMPSCI 684: Trustworthy and Responsible AI (TRAI) Syllabus</title>
+  <link rel="icon" type="image/png" href="cs684_logo.png" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css" />
   <link rel="stylesheet"
     href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@300;400;500;600&family=Source+Serif+4:ital,wght@0,400;0,600;1,400&display=swap" />
-  <link rel="shortcut icon" type="image/png" href="../assets/images/favicon.ico" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
   <style>
     :root {
@@ -56,7 +56,8 @@
 
     /* Offset anchor targets so the sticky navbar doesn't cover their header
        when jumped to from the assignment sidebar (or any #hash link). */
-    [id^="week"] {
+    [id^="week"],
+    #project {
       scroll-margin-top: 80px;
     }
 
@@ -293,12 +294,12 @@
     }
 
     /* new assignment tweaks */
-    #week3-assignment1 .content ul li,
-    #week3-assignment1 ul li {
+    #week4-assignment1 .content ul li,
+    #week4-assignment1 ul li {
       margin-bottom: 0.35rem;
     }
 
-    #week3-assignment1 .box ul li {
+    #week4-assignment1 .box ul li {
       margin-bottom: 0.3rem;
     }
   </style>
@@ -310,17 +311,15 @@
     <h4>Assignments</h4>
     <ul class="assignment-nav-list">
       <li><a href="#week2-startup" class="assignment-nav-link">Assignment 0</a></li>
-      <li><a href="#week3-assignment1" class="assignment-nav-link">Assignment 1</a></li>
-      <li><a href="#week4-assignment2" class="assignment-nav-link">Assignment 2</a></li>
-      <li><a href="#week5-assignment3" class="assignment-nav-link">Assignment 3</a></li>
-      <li><a href="#week6-assignment4" class="assignment-nav-link">Assignment 4</a></li>
-      <li><a href="#week7-assignment5" class="assignment-nav-link">Assignment 5</a></li>
-      <li><a href="#week8-assignment6" class="assignment-nav-link">Assignment 6</a></li>
-      <li><a href="#week9-assignment7" class="assignment-nav-link">Assignment 7</a></li>
-      <li><a href="#week10-assignment8" class="assignment-nav-link">Assignment 8</a></li>
-      <li><a href="#week11-assignment9" class="assignment-nav-link">Assignment 9</a></li>
-      <li><a href="#week12-assignment10" class="assignment-nav-link">Assignment 10</a></li>
-
+      <li><a href="#week4-assignment1" class="assignment-nav-link">Assignment 1</a></li>
+      <li><a href="#week5-assignment2" class="assignment-nav-link">Assignment 2</a></li>
+      <li><a href="#week6-assignment3" class="assignment-nav-link">Assignment 3</a></li>
+      <li><a href="#week7-assignment4" class="assignment-nav-link">Assignment 4</a></li>
+      <li><a href="#week8-assignment5" class="assignment-nav-link">Assignment 5</a></li>
+      <li><a href="#week9-assignment6" class="assignment-nav-link">Assignment 6</a></li>
+      <li><a href="#week10-assignment7" class="assignment-nav-link">Assignment 7</a></li>
+      <li><a href="#week11-assignment8" class="assignment-nav-link">Assignment 8</a></li>
+      <li><a href="#project" class="assignment-nav-link">Project</a></li>
     </ul>
   </aside>
 
@@ -330,8 +329,8 @@
       <a href="#expectations" class="nav-item">Expectations</a>
       <a href="#grading" class="nav-item">Grading</a>
       <a href="#syllabus" class="nav-item">Syllabus</a>
-      <a href="#project" class="nav-item">Project</a>
       <a href="#assignments" class="nav-item">Assignments</a>
+      <a href="#project" class="nav-item">Project</a>
       <a href="#policies" class="nav-item">Policies</a>
     </div>
   </nav>
@@ -461,7 +460,7 @@
               <td data-label="Date">Wed, Sep 9</td>
               <td data-label="Topic">Intro + Project group formations</td>
               <td data-label="Notes">First Day of Classes</td>
-              <td data-label="Links/Slides/Assignments"><a href="#week2-startup">Bonus Assignment: Startup ideas</a></td>
+              <td data-label="Links/Slides/Assignments"><a href="#week2-startup">Assignment 0: Startup ideas</a></td>
             </tr>
             <tr class="reading-row week-color-1">
               <td data-label="Week"></td>
@@ -475,11 +474,11 @@
               <td data-label="Week">Week 2</td>
               <td data-label="Class #">2</td>
               <td data-label="Date">Mon, Sep 14</td>
-              <td data-label="Topic">Overview Privacy and Security</td>
+              <td data-label="Topic">Overview of Privacy and Security</td>
               <td data-label="Notes"><a
                   href=https://docs.google.com/presentation/d/1SRfDoP_U0G9d50pYSWVqI7luRFAHV6QxXDyTZ5hHVdM/edit?usp=sharing>Slides</a>
               </td>
-              <td data-label="Links/Slides/Assignments"><a href="#week3-assignment1">Assignment 1 Release (Due 9/25)</a></td>
+              <td data-label="Links/Slides/Assignments"></td>
             </tr>
             <tr class="reading-row week-color-2">
               <td data-label="Week"></td>
@@ -524,7 +523,7 @@
               <td data-label="Date">Mon, Sep 21</td>
               <td data-label="Topic">Privacy. Training Data Attacks</td>
               <td data-label="Notes">Last day to add/drop (Grad)</td>
-              <td data-label="Links/Slides/Assignments"><a href="#week4-assignment2">Assignment 2 Release (Due 10/2)</a></td>
+              <td data-label="Links/Slides/Assignments"><a href="#week4-assignment1">Assignment 1 Release (Due 10/2)</a></td>
             </tr>
             <tr class="reading-row week-color-1">
               <td data-label="Week"></td>
@@ -589,23 +588,13 @@
               <td data-label="Notes"></td>
               <td data-label="Links/Slides/Assignments"></td>
             </tr>
-
-            <tr class="week-color-1">
-              <td data-label="Week"></td>
-              <td data-label="Class #"></td>
-              <td data-label="Date">Fri, Sep 25</td>
-              <td data-label="Topic"></td>
-              <td data-label="Notes"></td>
-              <td data-label="Links/Slides/Assignments"><strong>Assignment 1 due</strong></td>
-            </tr>
-
             <tr class="week-color-2">
               <td data-label="Week">Week 4</td>
               <td data-label="Class #">6</td>
               <td data-label="Date">Mon, Sep 28</td>
               <td data-label="Topic">Privacy. Differential Privacy, Part 1. Basics</td>
               <td data-label="Notes"></td>
-              <td data-label="Links/Slides/Assignments"><a href="#week5-assignment3">Assignment 3 Release (Due 10/9)</a></td>
+              <td data-label="Links/Slides/Assignments"><a href="#week5-assignment2">Assignment 2 Release (Due 10/9)</a></td>
             </tr>
             <tr class="reading-row week-color-2">
               <td data-label="Week"></td>
@@ -658,7 +647,7 @@
               <td data-label="Date">Fri, Oct 2</td>
               <td data-label="Topic"></td>
               <td data-label="Notes"></td>
-              <td data-label="Links/Slides/Assignments"><strong>Assignment 2 due</strong></td>
+              <td data-label="Links/Slides/Assignments"><strong>Assignment 1 due</strong></td>
             </tr>
             <tr class="week-color-1">
               <td data-label="Week">Week 5</td>
@@ -666,7 +655,7 @@
               <td data-label="Date">Mon, Oct 5</td>
               <td data-label="Topic">Privacy. Data Analytics, PII Filtering with LLMs</td>
               <td data-label="Notes"></td>
-              <td data-label="Links/Slides/Assignments"><a href="#week6-assignment4">Assignment 4 Release (Due 10/16)</a></td>
+              <td data-label="Links/Slides/Assignments"><a href="#week6-assignment3">Assignment 3 Release (Due 10/16)</a></td>
             </tr>
             <tr class="reading-row week-color-1">
               <td data-label="Week"></td>
@@ -720,7 +709,7 @@
               <td data-label="Date">Fri, Oct 9</td>
               <td data-label="Topic"></td>
               <td data-label="Notes"></td>
-              <td data-label="Links/Slides/Assignments"><strong>Assignment 3 due</strong></td>
+              <td data-label="Links/Slides/Assignments"><strong>Assignment 2 due</strong></td>
             </tr>
             <tr class="week-color-2">
               <td data-label="Week">Week 6</td>
@@ -728,7 +717,7 @@
               <td data-label="Date">Mon, Oct 12</td>
               <td data-label="Topic"><b>No class (Indigenous People's Day)</b></td>
               <td data-label="Notes"></td>
-              <td data-label="Links/Slides/Assignments"><a href="#week7-assignment5">Assignment 5 Release (Due 10/23)</a></td>
+              <td data-label="Links/Slides/Assignments"><a href="#week7-assignment4">Assignment 4 Release (Due 10/23)</a></td>
             </tr>
             <tr class="reading-row week-color-2">
               <td data-label="Week"></td>
@@ -760,7 +749,7 @@
               <td data-label="Date">Fri, Oct 16</td>
               <td data-label="Topic"></td>
               <td data-label="Notes"></td>
-              <td data-label="Links/Slides/Assignments"><strong>Assignment 4 due</strong><br></td>
+              <td data-label="Links/Slides/Assignments"><strong>Assignment 3 due</strong><br></td>
             </tr>
 
             <tr class="week-color-1">
@@ -777,7 +766,7 @@
               <td data-label="Date">Wed, Oct 21</td>
               <td data-label="Topic"><strong>Mid-Semester Project Presentations (cont.)</strong></td>
               <td data-label="Notes"></td>
-              <td data-label="Links/Slides/Assignments"><a href="#midterm-annc">Instructions</a></td>
+              <td data-label="Links/Slides/Assignments"></td>
             </tr>
             <tr class="week-color-1">
               <td data-label="Week"></td>
@@ -785,7 +774,7 @@
               <td data-label="Date">Fri, Oct 23</td>
               <td data-label="Topic"></td>
               <td data-label="Notes"></td>
-              <td data-label="Links/Slides/Assignments"><strong>Assignment 5 due</strong><br><strong>Project Proposal due</strong></td>
+              <td data-label="Links/Slides/Assignments"><strong>Assignment 4 due</strong><br><strong>Project Proposal due</strong></td>
             </tr>
             <tr class="week-color-2">
               <td data-label="Week">Week 8</td>
@@ -793,7 +782,7 @@
               <td data-label="Date">Mon, Oct 26</td>
               <td data-label="Topic">Security. Jailbreaks + Prompt injections</td>
               <td data-label="Notes"></td>
-              <td data-label="Links/Slides/Assignments"><a href="#week8-assignment6">Assignment 6 Release (Due 11/06)</a></td>
+              <td data-label="Links/Slides/Assignments"><a href="#week8-assignment5">Assignment 5 Release (Due 11/06)</a></td>
             </tr>       
             <tr class="reading-row week-color-2">
               <td data-label="Week"></td>
@@ -835,7 +824,7 @@
               <td data-label="Date">Mon, Nov 2</td>
               <td data-label="Topic">Security. Adversarial Examples in Multi-modal systems</td>
               <td data-label="Notes"></td>
-              <td data-label="Links/Slides/Assignments"><a href="#week9-assignment7">Assignment 7 Release (Due 11/13)</a></td>
+              <td data-label="Links/Slides/Assignments"><a href="#week9-assignment6">Assignment 6 Release (Due 11/13)</a></td>
             </tr>
             <tr class="reading-row week-color-1">
               <td data-label="Week"></td>
@@ -877,7 +866,7 @@
               <td data-label="Date">Fri, Nov 6</td>
               <td data-label="Topic"></td>
               <td data-label="Notes"></td>
-              <td data-label="Links/Slides/Assignments"><strong>Assignment 6 due</strong></td>
+              <td data-label="Links/Slides/Assignments"><strong>Assignment 5 due</strong></td>
             </tr>
             <tr class="week-color-2">
               <td data-label="Week">Week 10</td>
@@ -885,7 +874,7 @@
               <td data-label="Date">Mon, Nov 9</td>
               <td data-label="Topic">Security. Watermarks</td>
               <td data-label="Notes"></td>
-              <td data-label="Links/Slides/Assignments"><a href="#week10-assignment8">Assignment 8 Release (Due 11/20)</a></td>
+              <td data-label="Links/Slides/Assignments"><a href="#week10-assignment7">Assignment 7 Release (Due 11/20)</a></td>
             </tr>
             <tr class="reading-row week-color-2">
               <td data-label="Week"></td>
@@ -910,7 +899,7 @@
               <td data-label="Date">Fri, Nov 13</td>
               <td data-label="Topic"></td>
               <td data-label="Notes"></td>
-              <td data-label="Links/Slides/Assignments"><strong>Assignment 7 due</strong></td>
+              <td data-label="Links/Slides/Assignments"><strong>Assignment 6 due</strong></td>
             </tr>
             
             <tr class="week-color-1">
@@ -919,7 +908,7 @@
               <td data-label="Date">Mon, Nov 16</td>
               <td data-label="Topic">Security. Alignment Attacks</td>
               <td data-label="Notes"></td>
-              <td data-label="Links/Slides/Assignments"><a href="#week11-assignment9">Assignment 9 Release (Due 11/29)</a></td>
+              <td data-label="Links/Slides/Assignments"><a href="#week11-assignment8">Assignment 8 Release (Due 11/29)</a></td>
             </tr>
             <tr class="reading-row week-color-1">
               <td data-label="Week"></td>
@@ -962,7 +951,7 @@
               <td data-label="Date">Fri, Nov 20</td>
               <td data-label="Topic"></td>
               <td data-label="Notes"></td>
-              <td data-label="Links/Slides/Assignments"><strong>Assignment 8 due</strong></td>
+              <td data-label="Links/Slides/Assignments"><strong>Assignment 7 due</strong></td>
             </tr>
 
 
@@ -972,7 +961,7 @@
               <td data-label="Date">Mon, Nov 23</td>
               <td data-label="Topic">Environmental. Overthinking</td>
               <td data-label="Notes"></td>
-              <td data-label="Links/Slides/Assignments"><a href="#week12-assignment10">Assignment 10 Release (Due 12/11)</a></td>
+              <td data-label="Links/Slides/Assignments"></td>
             </tr>
             <tr class="reading-row week-color-2">
               <td data-label="Week"></td>
@@ -1005,7 +994,7 @@
               <td data-label="Date">Sun, Nov 29</td>
               <td data-label="Topic"></td>
               <td data-label="Notes"></td>
-              <td data-label="Links/Slides/Assignments"><strong>Assignment 9 due</strong></td>
+              <td data-label="Links/Slides/Assignments"><strong>Assignment 8 due</strong></td>
             </tr>
 
             <tr class="week-color-1">
@@ -1039,14 +1028,6 @@
               <td data-label="Class #"></td>
               <td data-label="Date"></td>
               <td data-label="Topic">No paper reading</td>
-              <td data-label="Notes"></td>
-              <td data-label="Links/Slides/Assignments"></td>
-            </tr>
-            <tr class="week-color-1">
-              <td data-label="Week"></td>
-              <td data-label="Class #"></td>
-              <td data-label="Date">Fri, Dec 4</td>
-              <td data-label="Topic"></td>
               <td data-label="Notes"></td>
               <td data-label="Links/Slides/Assignments"></td>
             </tr>
@@ -1089,7 +1070,7 @@
               <td data-label="Date">Fri, Dec 11</td>
               <td data-label="Topic"></td>
               <td data-label="Notes"></td>
-              <td data-label="Links/Slides/Assignments"><strong>Assignment 10 due</strong><br><strong>Poster due</strong></td>
+              <td data-label="Links/Slides/Assignments"><strong>Poster due</strong></td>
             </tr>
 
             <tr class="week-color-1">
@@ -1114,118 +1095,7 @@
         </div>
       </div>
 
-      <h2 class="title is-5 mt-4" id="project">Group Project</h2>
-      <div class="content">
-        <div class="box p-5" style="background-color: #f8fafc; border-left: 4px solid var(--secondary-color);">
-          <h4 class="title is-6 mb-3">Instructions for Your Project</h4>
-          <p>You will design an AI Startup and try to defend it against attacks.</p>
-
-          <p><strong>Pre-requisites:</strong></p>
-          <ul>
-            <li>You need to operate on customer data, i.e. users, companies</li>
-            <li>Your product should use LLMs</li>
-            <li>Your product operates with external parties, i.e. customers, vendors, etc.</li>
-          </ul>
-
-          <p><strong>Example projects:</strong></p>
-          <ul>
-            <li>Customer support bot</li>
-            <li>AI Tutor</li>
-            <li>Business assistant</li>
-            <li>...</li>
-          </ul>
-
-          <p>Throughout the semester you will add privacy and security features, building a comprehensive analysis of
-            your project.</p>
-
-          <p>Additionally, you will need to pick one of the research topics you are interested in and write an
-            extensive research report on it.</p>
-
-          <p>Make sure to track your own contributions through Git commits (both code and reports).</p>
-        </div>
-
-        <div id="midterm-annc" class="box p-5 mt-4"
-          style="background-color:#f8fafc; border-left:4px solid var(--primary-color);">
-          <h4 class="title is-6 mb-2">Announcement — Mid-Semester Presentations</h4>
-          <p class="mb-2"><strong>When:</strong> <span class="has-text-weight-semibold">Wed, Oct 19 and 21</span> (entire
-            class, 1h 45m)</p>
-          <p class="mb-3"><strong>Format:</strong> 8 teams per day · <em>10 min talk + 2 min Q&A</em> per team (≈ 12 min/slot).
-            Please keep slides visual and concise (10 slides max).</p>
-          <ul class="mb-3">
-            <li><strong>What to cover:</strong>
-              <ul>
-                <li><strong>Project title and a brief tagline</strong></li>
-                <li><strong>Problem and motivation:</strong> why this topic matters</li>
-                <li><strong>Startup scenario or application context (if relevant):</strong> what the system does, what
-                  the usecases are, who the users are, and what data it handles</li>
-                <li><strong>Threat model or research question:</strong> key privacy/security risks you aim to
-                  investigate</li>
-                <li><strong>Experiment plan:</strong> what you plan to evaluate and how</li>
-                <li><strong>Planned defenses &amp; evaluation ideas:</strong></li>
-                <li><strong>Next steps &amp; open questions:</strong> points you want feedback on</li>
-              </ul>
-            <li><strong>Slides:</strong> Add to the shared class deck <em>before class</em>. </li>
-            <li><strong>Policy:</strong> Use only synthetic/sanitized examples; no real PII on slides or demos.</li>
-          </ul>
-          <p class="mb-1"><strong>Follow-up:</strong> Submit the <strong>1-page proposal</strong> by <span
-              class="has-text-weight-semibold">Fri, Oct 23 (EOD)</span>, incorporating in-class feedback.</p>
-        </div>
-        <section id="final-report-poster" class="box p-5 mt-4"
-          style="background:#eef6ff; border-left:4px solid var(--primary-color);">
-          <h4 class="title is-6 mb-2">Final Report & Poster Submission Instructions</h4>
-
-          <div class="content">
-            <p class="mb-2"><strong>When:</strong> <span class="has-text-weight-semibold">Dec 11 (Poster)</span>, <span class="has-text-weight-semibold">Dec 23 (Report)</span> through Gradescope
-            </p>
-
-            <p><strong style="color:red;">NO LATE SUBMISSIONS ALLOWED</strong></p>
-
-            <ul class="mb-3">
-              <li><strong>Report Requirements</strong>
-                <ul>
-                  <li>At least <strong>8 full pages</strong> (not counting references).</li>
-                  <li>Use the provided LaTeX template (<a
-                      href=https://www.overleaf.com/read/xmmtpvfkwbtm#eff0e0>Overleaf</a>/<a
-                      href=https://github.com/ebagdasa/umass_aisec_tempate>Github</a>); do not modify font size/type or
-                    margins.</li>
-                  <li>Figures + tables must not exceed <strong>25%</strong> of total pages.</li>
-                  <li>Minimum of <strong>15 references</strong> using BibTeX.</li>
-                  <li>Other Resources: Sample papers from USENIX Security, IEEE S&P, CCS, NDSS, PETS.</li>
-                  <li>Suggested Report Structure:</li>
-                  <ul>
-                    <li><strong>Introduction:</strong> motivation, what the paper is about, why it matters; optional
-                      overview of sections.</li>
-                    <li><strong>Threat Model</strong></li>
-                    <li><strong>Attack/Defense Methodology</strong></li>
-                    <li><strong>Experiment Setup</strong></li>
-                    <li><strong>Results</strong></li>
-                    <li><strong>Discussion</strong></li>
-                    <li><strong>Conclusion:</strong> findings, limitations, and future work.</li>
-                  </ul>
-                </ul>
-              <li><strong>Poster Requirements</strong>
-                <ul>
-                  <li>One <strong>A1-size</strong> poster per team summarizing your project and key findings.</li>
-                  <li>High-legibility fonts; readable from ~1.5 meters.</li>
-                  <li>High‑resolution images; figure text should match main text size.</li>
-                  <li>Include key sections: Title, Authors, Introduction, Methodology, Results, Conclusion, References.
-                  </li>
-                  <li>Other Resources: <a
-                      href=https://drive.google.com/drive/u/1/folders/16tSJGJryd7NgQCBblaKxTfXLZXDIJJrt>NeurIPS</a>, <a
-                      href=https://github.com/zhoubolei/bolei_awesome_posters>Others</a></li>
-                </ul>
-
-              <li><strong>Use of AI</strong></li>
-              <p>You may use AI tools for wording, phrasing, and LaTeX assistance, but <strong>all research ideas must
-                  be original</strong>. You are the first author of your report.</p>
-
-          </div>
-        </section>
-      </div>
-
-
-
-      <h2 class="title is-4 mt-5" id="assignments">Assignments</h2>
+            <h2 class="title is-4 mt-5" id="assignments">Assignments</h2>
 
       <div class="content">
         <h3 class="title is-5 mt-4">All Assignments Overview</h3>
@@ -1233,13 +1103,11 @@
           <li>Build synthetic data + Show attacks (MIA or data extraction) → reconstruction</li>
           <li>Implement Federated Learning</li>
           <li>Implement Differential Privacy and Private Evolution</li>
-          <li>PII filtering/extraction</li>
-          <li>Contextual Integrity → airgap, context hijacking</li>
+          <li>Contextual Integrity & PII Filtering: PII filtering/extraction; contextual integrity → airgap, context hijacking</li>
           <li>Jailbreaking and prompt injections</li>
           <li>Multi-modal attacks</li>
           <li>Backdoors and watermarking </li>
           <li>Alignment attacks + RLHF</li>
-          <li>Resource overhead attacks</li>
         </ol>
         <h3 class="title is-5 mt-4">Assignment Process</h3>
         <div class="content">
@@ -1279,7 +1147,7 @@
       <div id="week2-startup" class="box p-5 mb-6"
         style="background-color:#f8fafc; border-left:4px solid var(--accent-color);">
         <header class="is-flex is-justify-content-space-between is-align-items-center mb-3">
-          <h3 class="title is-4 mb-0">(Bonus) Week 2 - Startup Ideas & Group Formation</h3>
+          <h3 class="title is-4 mb-0">Week 2 - Assignment 0 (not graded): Startup Ideas & Group Formation</h3>
           <span class="tag is-info is-light is-medium">Not graded · Bonus points for best ideas</span>
         </header>
 
@@ -1332,11 +1200,11 @@
       </div>
 
       <!-- WEEK 3 ASSIGNMENT (clean layout) -->
-      <section id="week3-assignment1" class="box p-5 mb-6"
+      <section id="week4-assignment1" class="box p-5 mb-6"
         style="background:#f8fafc; border-left:4px solid var(--accent-color);">
         <header class="is-flex is-justify-content-space-between is-align-items-center mb-3">
-          <h3 class="title is-4 mb-0">Week 3 — Build a Synthetic Dataset & MIA/Extraction Attack</h3>
-          <span class="tag is-success is-light is-medium">Due Fri 9/25 · 11:59 PM EST</span>
+          <h3 class="title is-4 mb-0">Week 4 — Assignment 1: Build a Synthetic Dataset & MIA/Extraction Attack</h3>
+          <span class="tag is-success is-light is-medium">Due Fri 10/2 · 11:59 PM EST</span>
         </header>
 
         <!-- At a glance -->
@@ -1364,7 +1232,7 @@
             <div class="box p-4" style="background:white;">
               <h4 class="title is-6 mb-3">Timeline</h4>
               <ul>
-                <li><strong>09/23:</strong> short in-class presentation</li>
+                <li><strong>09/30:</strong> short in-class presentation</li>
               </ul>
             </div>
           </div>
@@ -1459,7 +1327,7 @@
 
         <hr class="my-5">
 
-        <h4 class="title is-5 mb-2">In-class Presentation (09/23)</h4>
+        <h4 class="title is-5 mb-2">In-class Presentation (09/30)</h4>
         <div class="content">
           <ul>
             <li><strong>Upload:</strong> Add your slides to the shared
@@ -1477,11 +1345,11 @@
       </section>
 
       <!-- WEEK 4 ASSIGNMENT (clean layout) -->
-      <section id="week4-assignment2" class="box p-5 mb-6"
+      <section id="week5-assignment2" class="box p-5 mb-6"
         style="background:#f8fafc; border-left:4px solid var(--accent-color);">
         <header class="is-flex is-justify-content-space-between is-align-items-center mb-3">
-          <h3 class="title is-4 mb-0">Week 4 — Assignment 2: Federated Learning</h3>
-          <span class="tag is-success is-light is-medium">Presentation 9/30 · Report & Code Due Fri 10/2 · 11:59 PM
+          <h3 class="title is-4 mb-0">Week 5 — Assignment 2: Federated Learning</h3>
+          <span class="tag is-success is-light is-medium">Presentation 10/7 · Report & Code Due Fri 10/9 · 11:59 PM
             ET</span>
         </header>
 
@@ -1512,14 +1380,14 @@
             <div class="box p-4" style="background:white;">
               <h4 class="title is-6 mb-3">Timeline</h4>
               <ul>
-                <li><strong>Wed 9/30 (in class):</strong> 1-2 min presentation + quick demo</li>
+                <li><strong>Wed 10/7 (in class):</strong> 1-2 min presentation + quick demo</li>
               </ul>
             </div>
           </div>
         </div>
 
         <!-- Presentation -->
-        <h4 class="title is-5 mt-2 mb-3">In-Class Presentation (1-2 minutes) (9/30) </h4>
+        <h4 class="title is-5 mt-2 mb-3">In-Class Presentation (1-2 minutes) (10/7) </h4>
         <div class="content">
           <ul>
             <li><strong>Summary:</strong> 2-3 bullet points from papers (main idea & why it matters).</li>
@@ -1605,11 +1473,11 @@
         <!-- </div> -->
       </section>
 
-      <section id="week5-assignment3" class="box p-5 mb-6"
+      <section id="week6-assignment3" class="box p-5 mb-6"
         style="background:#f8fafc; border-left:4px solid var(--accent-color);">
         <header class="is-flex is-justify-content-space-between is-align-items-center mb-3">
-          <h3 class="title is-4 mb-0">Week 5 — Assignment 3: Differential Privacy (DP-SGD)</h3>
-          <span class="tag is-success is-light is-medium">Presentation Wed 10/7 · Report & Code Due Fri 10/9 · 11:59 PM
+          <h3 class="title is-4 mb-0">Week 6 — Assignment 3: Differential Privacy (DP-SGD)</h3>
+          <span class="tag is-success is-light is-medium">Presentation Wed 10/14 · Report & Code Due Fri 10/16 · 11:59 PM
             ET</span>
         </header>
 
@@ -1637,14 +1505,14 @@
             <div class="box p-4" style="background:white;">
               <h4 class="title is-6 mb-3">Timeline</h4>
               <ul>
-                <li><strong>Wed 10/7 (in class):</strong> 1-2 min presentation + quick DP demo</li>
+                <li><strong>Wed 10/14 (in class):</strong> 1-2 min presentation + quick DP demo</li>
               </ul>
             </div>
           </div>
         </div>
 
         <!-- Presentation -->
-        <h4 class="title is-5 mt-2 mb-3">In-Class Presentation (10/7)</h4>
+        <h4 class="title is-5 mt-2 mb-3">In-Class Presentation (10/14)</h4>
         <div class="content">
           <ul>
             <li><strong>Summary:</strong> Methods (DP-SGD / DP mechanisms), guarantees, and utility costs (2-3 bullets).
@@ -1738,11 +1606,11 @@
           </div>
       </section>
 
-      <section id="week6-assignment4" class="box p-5 mb-6"
+      <section id="week7-assignment4" class="box p-5 mb-6"
         style="background:#f8fafc; border-left:4px solid var(--accent-color);">
         <header class="is-flex is-justify-content-space-between is-align-items-center mb-3">
-          <h3 class="title is-4 mb-0">Week 5 — Assignment 4: PII Filtering</h3>
-          <span class="tag is-success is-light is-medium">Presentation Wed 10/14 · Report & Code Due Fri 10/16 · 11:59
+          <h3 class="title is-4 mb-0">Week 7 — Assignment 4: Contextual Integrity &amp; PII Filtering</h3>
+          <span class="tag is-success is-light is-medium">Presentation Wed 10/21 · Report & Code Due Fri 10/23 · 11:59
             PM ET</span>
         </header>
 
@@ -1754,8 +1622,12 @@
               <ul class="mb-2">
                 <li>📖 <a href="https://arxiv.org/abs/2310.07298" target="_blank">Beyond Memorization: Violating Privacy
                     via Inference with LLMs</a></li>
-                <li>Focus: inference threats vs. memorization; where PII can leak in your pipeline; prototype filter.
-                </li>
+                <li>📖 <a href="https://arxiv.org/abs/2310.17884">Can LLMs Keep a Secret? Testing Privacy
+                    Implications of Language Models via Contextual Integrity Theory</a></li>
+                <li>📖 <a href="https://arxiv.org/abs/2405.05175">AirGapAgent: Protecting Privacy-Conscious
+                    Conversational Agents</a></li>
+                <li>Focus: inference threats vs. memorization and PII leakage; contextual integrity and how to build AI
+                  Agents that protect privacy.</li>
               </ul>
               <p class="mb-1"><strong>What to submit:</strong></p>
               <ul class="mt-1">
@@ -1769,14 +1641,18 @@
             <div class="box p-4" style="background:white;">
               <h4 class="title is-6 mb-3">Timeline</h4>
               <ul>
-                <li><strong>Wed 10/14 (in class):</strong> 1-2 min presentation + quick demo</li>
+                <li><strong>Wed 10/21 (in class):</strong> 1-2 min presentation + quick demo (covering both parts)</li>
               </ul>
             </div>
           </div>
         </div>
 
+        <hr class="my-5">
+
+        <h4 class="title is-4 mb-3">Part A — PII Filtering</h4>
+
         <!-- Presentation -->
-        <h4 class="title is-5 mt-2 mb-3">In-Class Presentation (10/14)</h4>
+        <h4 class="title is-5 mt-2 mb-3">In-Class Presentation</h4>
         <div class="content">
           <ul>
             <li><strong>Summary:</strong> inference threats vs. memorization (2-3 bullets)</li>
@@ -1808,10 +1684,8 @@
           </div>
         </div>
 
-        <hr class="my-5">
-
         <!-- Coding Assignment -->
-        <h4 class="title is-5 mb-2">Coding Assignment 4: Prototype PII Filtering</h4>
+        <h4 class="title is-5 mb-2">Coding Task A: Prototype PII Filtering</h4>
         <p class="mb-4"><strong>Goal:</strong> Implement a basic PII-detection and redaction step to practice text
           preprocessing for privacy protection.</p>
 
@@ -1863,50 +1737,13 @@
             </ul>
           </div>
         </div>
-      </section>
 
-      <section id="week7-assignment5" class="box p-5 mb-6"
-        style="background:#f8fafc; border-left:4px solid var(--accent-color);">
-        <header class="is-flex is-justify-content-space-between is-align-items-center mb-3">
-          <h3 class="title is-4 mb-0">Week 6 — Assignment 5: Contextual Integrity</h3>
-          <span class="tag is-success is-light is-medium">Presentation Wed 10/21 · Report & Code Due Fri 10/23 · 11:59
-            PM ET</span>
-        </header>
+        <hr class="my-5">
 
-        <!-- At a glance -->
-        <div class="columns is-variable is-5 mb-4">
-          <div class="column is-6">
-            <div class="box p-4" style="background:white;">
-              <h4 class="title is-6 mb-3">At a Glance</h4>
-              <ul class="mb-2">
-                <!-- <li>📖 <a href="https://arxiv.org/abs/2310.07298" target="_blank">Beyond Memorization: Violating Privacy via Inference with LLMs</a></li> -->
-                <li>📖 1: <a href="https://arxiv.org/abs/2310.17884">Can LLMs Keep a Secret? Testing Privacy
-                    Implications of Language Models via Contextual Integrity Theory</a></li>
-                <li>📖 2: <a href="https://arxiv.org/abs/2405.05175">AirGapAgent: Protecting Privacy-Conscious
-                    Conversational Agents</a></li>
-
-                <li>Focus: how to build AI Agents that protect privacy.</li>
-              </ul>
-              <p class="mb-1"><strong>What to submit:</strong></p>
-              <ul class="mt-1">
-                <li>Slide deck</li>
-                <li>Reading report (PDF) → Gradescope</li>
-                <li>Code + README → GitHub repo</li>
-              </ul>
-            </div>
-          </div>
-          <div class="column is-6">
-            <div class="box p-4" style="background:white;">
-              <h4 class="title is-6 mb-3">Timeline</h4>
-              <ul>
-                <li><strong>Wed 10/21 (in class):</strong> 1-2 min presentation + quick demo</li>
-              </ul>
-            </div>
-          </div>
-        </div>
+        <h4 class="title is-4 mb-3">Part B — Contextual Integrity</h4>
 
         <!-- Presentation -->
-        <h4 class="title is-5 mt-2 mb-3">In-Class Presentation (10/21)</h4>
+        <h4 class="title is-5 mt-2 mb-3">In-Class Presentation</h4>
         <div class="content">
           <ul>
             <li><strong>Summary:</strong> what is contextual integrity</li>
@@ -1945,10 +1782,8 @@
           </div>
         </div>
 
-        <hr class="my-5">
-
         <!-- Coding Assignment -->
-        <h4 class="title is-5 mb-2">Coding Assignment 5: Contextual Integrity</h4>
+        <h4 class="title is-5 mb-2">Coding Task B: Contextual Integrity</h4>
         <p class="mb-4"><strong>Goal:</strong> Implement 5 different
           scenarios of using an AI agent for your startup. Generate more
           synthetic data if needed. Implement attacks trying to trick the
@@ -2000,10 +1835,10 @@
         </div>
       </section>
 
-      <section id="week8-assignment6" class="box p-5 mb-6"
+      <section id="week8-assignment5" class="box p-5 mb-6"
         style="background:#f8fafc; border-left:4px solid var(--accent-color);">
         <header class="is-flex is-justify-content-space-between is-align-items-center mb-3">
-          <h3 class="title is-4 mb-0">Week 8 — Assignment 6: Jailbreaks &amp; Prompt Injections</h3>
+          <h3 class="title is-4 mb-0">Week 8 — Assignment 5: Jailbreaks &amp; Prompt Injections</h3>
           <span class="tag is-success is-light is-medium">Presentation Wed 11/04 · Report &amp; Code Due Fri 11/06 ·
             11:59 PM ET</span>
         </header>
@@ -2068,7 +1903,7 @@
         <hr class="my-5">
 
         <!-- Coding Assignment -->
-        <h4 class="title is-5 mb-2">Coding Assignment 6: Jailbreak &amp; Prompt Injection Suite</h4>
+        <h4 class="title is-5 mb-2">Coding Assignment 5: Jailbreak &amp; Prompt Injection Suite</h4>
         <p class="mb-4"><strong>Goal:</strong> Create at least one jailbreak prompt and one prompt-injection payload,
           evaluate success against your system or prototype, and demonstrate at least one successful defense against
           each.</p>
@@ -2114,10 +1949,10 @@
         </div>
       </section>
 
-      <section id="week9-assignment7" class="box p-5 mb-6"
+      <section id="week9-assignment6" class="box p-5 mb-6"
         style="background:#f8fafc; border-left:4px solid var(--accent-color);">
         <header class="is-flex is-justify-content-space-between is-align-items-center mb-3">
-          <h3 class="title is-4 mb-0">Week 9 — Assignment 7: Multi-modal attacks</h3>
+          <h3 class="title is-4 mb-0">Week 9 — Assignment 6: Multi-modal attacks</h3>
           <span class="tag is-success is-light is-medium">Presentation Mon 11/09 · Report &amp; Code Due Fri 11/13 · 11:59
             PM ET</span>
         </header>
@@ -2180,7 +2015,7 @@
         <hr class="my-5">
 
         <!-- Coding Assignment -->
-        <h4 class="title is-5 mb-2">Coding Assignment 7: Multi-modal attacks</h4>
+        <h4 class="title is-5 mb-2">Coding Assignment 6: Multi-modal attacks</h4>
         <p class="mb-4"><strong>Goal:</strong> Explore and evaluate multi-modal attacks on aligned language models.</p>
 
         <div class="box p-4 mb-4" style="background:white;">
@@ -2222,10 +2057,10 @@
         </div>
       </section>
 
-      <section id="week10-assignment8" class="box p-5 mb-6"
+      <section id="week10-assignment7" class="box p-5 mb-6"
         style="background:#f8fafc; border-left:4px solid var(--accent-color);">
         <header class="is-flex is-justify-content-space-between is-align-items-center mb-3">
-          <h3 class="title is-4 mb-0">Week 10 — Assignment 8: Backdoors &amp; Watermarking</h3>
+          <h3 class="title is-4 mb-0">Week 10 — Assignment 7: Backdoors &amp; Watermarking</h3>
           <span class="tag is-success is-light is-medium">Presentation Wed 11/18 · Report &amp; Code Due Fri 11/20 ·
             11:59 PM ET</span>
         </header>
@@ -2296,7 +2131,7 @@
         <hr class="my-5">
 
         <!-- Coding Assignment -->
-        <h4 class="title is-5 mb-2">Coding Assignment 8: Backdoor</h4>
+        <h4 class="title is-5 mb-2">Coding Assignment 7: Backdoor</h4>
         <p class="mb-4"><strong>Goal:</strong> Insert a backdoor into a language model and evaluate effectiveness,
           stealth, and utility impact. Make the model produce an attacker-chosen output only when a specific keyword
           (trigger) appears.</p>
@@ -2341,10 +2176,10 @@
           </div>
         </div>
       </section>
-      <section id="week11-assignment9" class="box p-5 mb-6"
+      <section id="week11-assignment8" class="box p-5 mb-6"
         style="background:#f8fafc; border-left:4px solid var(--accent-color);">
         <header class="is-flex is-justify-content-space-between is-align-items-center mb-3">
-          <h3 class="title is-4 mb-0">Week 11 — Assignment 9: Alignment Attacks</h3>
+          <h3 class="title is-4 mb-0">Week 11 — Assignment 8: Alignment Attacks</h3>
           <span class="tag is-success is-light is-medium">Presentation Wed 11/27 · Report &amp; Code Due Fri 11/29 ·
             11:59 PM ET</span>
         </header>
@@ -2412,7 +2247,7 @@
         <hr class="my-5">
 
         <!-- Coding Assignment -->
-        <h4 class="title is-5 mb-2">Coding Assignment 9: Alignment Attack</h4>
+        <h4 class="title is-5 mb-2">Coding Assignment 8: Alignment Attack</h4>
         <p class="mb-4"><strong>Goal:</strong> Implement a misalignment attack and evaluate safety vs. utility
           before/after.</p>
 
@@ -2468,14 +2303,17 @@
       </section>
 
 
-      <section id="week12-assignment10" class="box p-5 mb-6"
+      <!--
+      DROPPED — Assignment 9: Resource Abuse (kept for possible future reuse; not referenced elsewhere on the site)
+
+      <section id="week12-assignment9" class="box p-5 mb-6"
         style="background:#f8fafc; border-left:4px solid var(--accent-color);">
         <header class="is-flex is-justify-content-space-between is-align-items-center mb-3">
-          <h3 class="title is-4 mb-0">Week 12 — Assignment 10: Resource Abuse</h3>
+          <h3 class="title is-4 mb-0">Week 12 — Assignment 9: Resource Abuse</h3>
           <span class="tag is-success is-light is-medium">Presentation Wed 12/09 · Report & Code Due Fri 12/11 · 11:59 PM ET</span>
         </header>
 
-        <!-- At a glance -->
+        At a glance
         <div class="columns is-variable is-5 mb-4">
           <div class="column is-6">
             <div class="box p-4" style="background:white;">
@@ -2504,7 +2342,7 @@
           </div>
         </div>
 
-        <!-- Class Presentation -->
+        Class Presentation
         <h4 class="title is-5 mt-2 mb-3">In-Class Presentation 1 slide (12/09)</h4>
         <div class="content">
           <ul>
@@ -2515,7 +2353,7 @@
           </ul>
         </div>
 
-        <!-- Reading Report -->
+        Reading Report
         <h4 class="title is-5 mt-2 mb-3">Reading Report</h4>
         <div class="content">
           <p><strong>Summarize &amp; critique:</strong> 2-3 sentence summary + 1 strength + 1 weakness.</p>
@@ -2536,8 +2374,8 @@
           </div>
         </div>
         <hr class="my-5">
-        <!-- Coding Assignment -->
-        <h4 class="title is-5 mb-2">Coding Assignment 10: Resource Abuse Attack</h4>
+        Coding Assignment
+        <h4 class="title is-5 mb-2">Coding Assignment 9: Resource Abuse Attack</h4>
         <p class="mb-4"><strong>Goal:</strong> Build a demo that makes a
           reasoning model spend noticeably more compute (time/tokens) without
           changing the final answer.</p>
@@ -2561,7 +2399,7 @@
           </div>
         </div>
 
-        <!-- Deliverables -->
+        Deliverables
         <div class="box p-4" style="background:white;">
           <h5 class="title is-6 mb-3">Deliverables (GitHub)</h5>
           <div class="content">
@@ -2575,6 +2413,128 @@
                 a defense, show its effect.</li>
             </ul>
           </div>
+        </div>
+      </section>
+      -->
+
+      <section id="project" class="box p-5 mb-6"
+        style="background:#f8fafc; border-left:4px solid var(--accent-color);">
+        <header class="is-flex is-justify-content-space-between is-align-items-center mb-3">
+          <h3 class="title is-4 mb-0">Group Project</h3>
+          <span class="tag is-success is-light is-medium">Mid-semester Presentation Oct 19 &amp; 21 · Poster Due Fri 12/11 · Poster Session Mon 12/14 · Report &amp; Code Due Wed 12/23 ·
+            11:59 PM ET</span>
+        </header>
+
+        <!-- Overview -->
+        <div class="content">
+          <p>You will design an AI Startup and try to defend it against attacks.</p>
+
+          <p><strong>Pre-requisites:</strong></p>
+          <ul>
+            <li>You need to operate on customer data, i.e. users, companies</li>
+            <li>Your product should use LLMs</li>
+            <li>Your product operates with external parties, i.e. customers, vendors, etc.</li>
+          </ul>
+
+          <p><strong>Example projects:</strong></p>
+          <ul>
+            <li>Customer support bot</li>
+            <li>AI Tutor</li>
+            <li>Business assistant</li>
+            <li>...</li>
+          </ul>
+
+          <p>Throughout the semester you will add privacy and security features, building a comprehensive analysis of
+            your project.</p>
+
+          <p>Additionally, you will need to pick one of the research topics you are interested in and write an
+            extensive research report on it.</p>
+
+          <p>Make sure to track your own contributions through Git commits (both code and reports).</p>
+        </div>
+
+        <hr class="my-5">
+
+        <!-- Mid-Semester Presentations -->
+        <h4 id="midterm-annc" class="title is-5 mb-2">Mid-Semester Presentations</h4>
+        <div class="content">
+          <p class="mb-2"><strong>When:</strong> <span class="has-text-weight-semibold">Oct 19 and 21</span> (entire
+            class, 1h 45m)</p>
+          <p class="mb-3"><strong>Format:</strong> 8 teams per day · <em>10 min talk + 2 min Q&A</em> per team (≈ 12 min/slot).
+            Please keep slides visual and concise (10 slides max).</p>
+          <ul class="mb-3">
+            <li><strong>What to cover:</strong>
+              <ul>
+                <li><strong>Project title and a brief tagline</strong></li>
+                <li><strong>Problem and motivation:</strong> why this topic matters</li>
+                <li><strong>Startup scenario or application context (if relevant):</strong> what the system does, what
+                  the usecases are, who the users are, and what data it handles</li>
+                <li><strong>Threat model or research question:</strong> key privacy/security risks you aim to
+                  investigate</li>
+                <li><strong>Experiment plan:</strong> what you plan to evaluate and how</li>
+                <li><strong>Planned defenses &amp; evaluation ideas:</strong></li>
+                <li><strong>Next steps &amp; open questions:</strong> points you want feedback on</li>
+              </ul>
+            </li>
+            <li><strong>Slides:</strong> Add to the shared class deck <em>before class</em>. </li>
+            <li><strong>Policy:</strong> Use only synthetic/sanitized examples; no real PII on slides or demos.</li>
+          </ul>
+          <p class="mb-1"><strong>Follow-up:</strong> Submit the <strong>1-page proposal</strong> by <span
+              class="has-text-weight-semibold">Fri, Oct 23 (EOD)</span>, incorporating in-class feedback.</p>
+        </div>
+
+        <hr class="my-5">
+
+        <!-- Final Report & Poster -->
+        <h4 id="final-report-poster" class="title is-5 mb-2">Final Report &amp; Poster Submission Instructions</h4>
+        <div class="content">
+          <p class="mb-2"><strong>When:</strong> <span class="has-text-weight-semibold">Dec 11 (Poster)</span>, <span class="has-text-weight-semibold">Dec 23 (Report)</span> through Gradescope
+          </p>
+
+          <p><strong style="color:red;">NO LATE SUBMISSIONS ALLOWED</strong></p>
+
+          <ul class="mb-3">
+            <li><strong>Report Requirements</strong>
+              <ul>
+                <li>At least <strong>8 full pages</strong> (not counting references).</li>
+                <li>Use the provided LaTeX template (<a
+                    href=https://www.overleaf.com/read/xmmtpvfkwbtm#eff0e0>Overleaf</a>/<a
+                    href=https://github.com/ebagdasa/umass_aisec_tempate>Github</a>); do not modify font size/type or
+                  margins.</li>
+                <li>Figures + tables must not exceed <strong>25%</strong> of total pages.</li>
+                <li>Minimum of <strong>15 references</strong> using BibTeX.</li>
+                <li>Other Resources: Sample papers from USENIX Security, IEEE S&P, CCS, NDSS, PETS.</li>
+                <li>Suggested Report Structure:
+                  <ul>
+                    <li><strong>Introduction:</strong> motivation, what the paper is about, why it matters; optional
+                      overview of sections.</li>
+                    <li><strong>Threat Model</strong></li>
+                    <li><strong>Attack/Defense Methodology</strong></li>
+                    <li><strong>Experiment Setup</strong></li>
+                    <li><strong>Results</strong></li>
+                    <li><strong>Discussion</strong></li>
+                    <li><strong>Conclusion:</strong> findings, limitations, and future work.</li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+            <li><strong>Poster Requirements</strong>
+              <ul>
+                <li>One <strong>A1-size</strong> poster per team summarizing your project and key findings.</li>
+                <li>High-legibility fonts; readable from ~1.5 meters.</li>
+                <li>High‑resolution images; figure text should match main text size.</li>
+                <li>Include key sections: Title, Authors, Introduction, Methodology, Results, Conclusion, References.
+                </li>
+                <li>Other Resources: <a
+                    href=https://drive.google.com/drive/u/1/folders/16tSJGJryd7NgQCBblaKxTfXLZXDIJJrt>NeurIPS</a>, <a
+                    href=https://github.com/zhoubolei/bolei_awesome_posters>Others</a></li>
+              </ul>
+            </li>
+            <li><strong>Use of AI</strong>
+              <p>You may use AI tools for wording, phrasing, and LaTeX assistance, but <strong>all research ideas must
+                  be original</strong>. You are the first author of your report.</p>
+            </li>
+          </ul>
         </div>
       </section>
 
@@ -2759,7 +2719,7 @@
     });
 
     // Highlight active assignment on scroll
-    const assignmentSections = document.querySelectorAll('[id^="week"]');
+    const assignmentSections = document.querySelectorAll('[id^="week"], #project');
     const assignmentLinks = document.querySelectorAll('.assignment-nav-link');
 
     function highlightActiveAssignment() {

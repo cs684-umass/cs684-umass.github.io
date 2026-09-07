@@ -20,6 +20,12 @@
       --border-color: #eaeaea;
     }
 
+    /* Offsets anchor-scroll targets so headings don't land underneath the
+       sticky nav bar. */
+    html {
+      scroll-padding-top: 64px;
+    }
+
     body {
       font-family: "Source Sans 3", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
       color: var(--text-color);
@@ -119,7 +125,16 @@
       min-width: 760px;
     }
 
+    .syllabus-table td[data-label="Date"],
+    .syllabus-table th:nth-child(3) {
+      white-space: nowrap;
+    }
+
     @media screen and (max-width: 768px) {
+      html {
+        scroll-padding-top: 0;
+      }
+
       .section-nav {
         display: none;
       }
@@ -269,7 +284,9 @@
       <a href="#expectations" class="nav-item">Expectations</a>
       <a href="#grading" class="nav-item">Grading</a>
       <a href="#syllabus" class="nav-item">Syllabus</a>
+      <a href="#groups" class="nav-item">Groups</a>
       <a href="#assignments" class="nav-item">Assignments</a>
+      <a href="#final-project" class="nav-item">Final Project</a>
       <a href="#policies" class="nav-item">Policies</a>
     </div>
   </nav>
@@ -326,7 +343,7 @@
                   <td><strong>Assignments (slides + report + code)</strong></td>
                   <td>40%</td>
                   <td>2 total (20% each), allowed 2
-                    late day per assignment.</td>
+                    late days per assignment.</td>
                 </tr>
                 <tr>
                   <td><strong>Final Project</strong></td>
@@ -341,13 +358,45 @@
                   </td>
                 </tr>
                 <tr>
-                  <td><strong>(Optional) bonus</strong></td>
+                  <td><strong>Extra Credits</strong></td>
                   <td>up to 5%</td>
                   <td>Active participation, excellent code implementation, slide efforts</td>
                 </tr>
               </tbody>
             </table>
           </div>
+        </div>
+      </div>
+
+      <h2 class="title is-4 mt-5" id="grade-scale">Course Grade Scale</h2>
+      <div class="content">
+        <div class="table-container">
+          <table class="table is-striped is-fullwidth grade-scale">
+            <tbody>
+              <tr>
+                <th>Grade</th>
+                <td>A</td>
+                <td>A-</td>
+                <td>B+</td>
+                <td>B</td>
+                <td>B-</td>
+                <td>C+</td>
+                <td>C</td>
+                <td>F</td>
+              </tr>
+              <tr>
+                <th>Range</th>
+                <td>93-100</td>
+                <td>90-92</td>
+                <td>87-89</td>
+                <td>83-86</td>
+                <td>80-82</td>
+                <td>77-79</td>
+                <td>73-76</td>
+                <td>0-72</td>
+              </tr>
+            </tbody>
+          </table>
         </div>
       </div>
 
@@ -398,7 +447,7 @@
               <td data-label="Date">Wed, Sep 9</td>
               <td data-label="Topic">Introduction</td>
               <td data-label="Notes">First Day of Classes</td>
-              <td data-label="Links/Slides/Assignments">Assignment 0: Startup ideas</td>
+              <td data-label="Links/Slides/Assignments">Assignment 0 (Startup ideas) Release (Due 09/18)</td>
             </tr>
             <tr class="reading-row week-color-1">
               <td data-label="Week"></td>
@@ -420,8 +469,7 @@
               <td data-label="Week"></td>
               <td data-label="Class #"></td>
               <td data-label="Date"></td>
-              <td data-label="Topic">📖 Paper 1: <a href="https://arxiv.org/abs/1611.03814">Towards the Science of Security and Privacy in
-                  Machine Learning</a></td>
+              <td data-label="Topic">📖 Paper 1: <a href="https://arxiv.org/abs/1611.03814">Towards the Science of Security and Privacy in Machine Learning</a></td>
               <td data-label="Notes"></td>
               <td data-label="Links/Slides/Assignments"></td>
             </tr>
@@ -437,8 +485,7 @@
               <td data-label="Week"></td>
               <td data-label="Class #"></td>
               <td data-label="Date"></td>
-              <td data-label="Topic">📖 Paper 1: <a href="https://arxiv.org/abs/2112.03570">Membership Inference Attacks From First
-                  Principles</a></td>
+              <td data-label="Topic">📖 Paper 1: <a href="https://arxiv.org/abs/2112.03570">Membership Inference Attacks From First Principles</a></td>
               <td data-label="Notes"></td>
               <td data-label="Links/Slides/Assignments"></td>
             </tr>
@@ -446,10 +493,17 @@
               <td data-label="Week"></td>
               <td data-label="Class #"></td>
               <td data-label="Date"></td>
-              <td data-label="Topic">📖 Paper 2: <a href="https://arxiv.org/abs/1610.05820">Membership Inference Attacks against Machine
-                  Learning Models</a></td>
+              <td data-label="Topic">📖 Paper 2: <a href="https://arxiv.org/abs/1610.05820">Membership Inference Attacks against Machine Learning Models</a></td>
               <td data-label="Notes"></td>
               <td data-label="Links/Slides/Assignments"></td>
+            </tr>
+            <tr class="week-color-2">
+              <td data-label="Week"></td>
+              <td data-label="Class #"></td>
+              <td data-label="Date">Fri, Sep 18</td>
+              <td data-label="Topic"></td>
+              <td data-label="Notes"></td>
+              <td data-label="Links/Slides/Assignments"><strong>Assignment 0 due</strong></td>
             </tr>
             <tr class="week-color-1">
               <td data-label="Week">Week 3</td>
@@ -463,8 +517,7 @@
               <td data-label="Week"></td>
               <td data-label="Class #"></td>
               <td data-label="Date"></td>
-              <td data-label="Topic">📖 Paper 1: <a href="https://arxiv.org/abs/2012.07805">Extracting Training Data from Large Language
-                  Models</a></td>
+              <td data-label="Topic">📖 Paper 1: <a href="https://arxiv.org/abs/2012.07805">Extracting Training Data from Large Language Models</a></td>
               <td data-label="Notes"></td>
               <td data-label="Links/Slides/Assignments"></td>
             </tr>
@@ -472,8 +525,7 @@
               <td data-label="Week"></td>
               <td data-label="Class #"></td>
               <td data-label="Date"></td>
-              <td data-label="Topic">📖 Paper 2: <a href="https://arxiv.org/abs/2503.17514">Language Models May Verbatim Complete Text They
-                  Were Not Explicitly Trained On</a></td>
+              <td data-label="Topic">📖 Paper 2: <a href="https://arxiv.org/abs/2503.17514">Language Models May Verbatim Complete Text They Were Not Explicitly Trained On</a></td>
               <td data-label="Notes"></td>
               <td data-label="Links/Slides/Assignments"></td>
             </tr>
@@ -481,8 +533,7 @@
               <td data-label="Week"></td>
               <td data-label="Class #"></td>
               <td data-label="Date"></td>
-              <td data-label="Topic">📖 Paper 3: <a href="https://arxiv.org/abs/2409.19798">Membership Inference Attacks Cannot Prove that
-                  a Model Was Trained On Your Data</a></td>
+              <td data-label="Topic">📖 Paper 3: <a href="https://arxiv.org/abs/2409.19798">Membership Inference Attacks Cannot Prove that a Model Was Trained On Your Data</a></td>
               <td data-label="Notes"></td>
               <td data-label="Links/Slides/Assignments"></td>
             </tr>
@@ -490,12 +541,10 @@
               <td data-label="Week"></td>
               <td data-label="Class #"></td>
               <td data-label="Date"></td>
-              <td data-label="Topic">📖 Paper 4: <a href="https://arxiv.org/abs/2004.15015">Imitation Attacks and Defenses for Black-box
-                  Machine Translation Systems</a></td>
+              <td data-label="Topic">📖 Paper 4: <a href="https://arxiv.org/abs/2004.15015">Imitation Attacks and Defenses for Black-box Machine Translation Systems</a></td>
               <td data-label="Notes"></td>
               <td data-label="Links/Slides/Assignments"></td>
             </tr>
-
             <tr class="week-color-1">
               <td data-label="Week"></td>
               <td data-label="Class #">5</td>
@@ -508,8 +557,7 @@
               <td data-label="Week"></td>
               <td data-label="Class #"></td>
               <td data-label="Date"></td>
-              <td data-label="Topic">📖 Paper 1: <a href="https://arxiv.org/abs/1602.05629">Communication-Efficient Learning of Deep
-                  Networks from Decentralized Data</a></td>
+              <td data-label="Topic">📖 Paper 1: <a href="https://arxiv.org/abs/1602.05629">Communication-Efficient Learning of Deep Networks from Decentralized Data</a></td>
               <td data-label="Notes"></td>
               <td data-label="Links/Slides/Assignments"></td>
             </tr>
@@ -517,8 +565,7 @@
               <td data-label="Week"></td>
               <td data-label="Class #"></td>
               <td data-label="Date"></td>
-              <td data-label="Topic">📖 Paper 2: <a href="https://arxiv.org/abs/1912.04977">Advances and Open Problems in Federated
-                  Learning</a></td>
+              <td data-label="Topic">📖 Paper 2: <a href="https://arxiv.org/abs/1912.04977">Advances and Open Problems in Federated Learning</a></td>
               <td data-label="Notes"></td>
               <td data-label="Links/Slides/Assignments"></td>
             </tr>
@@ -534,9 +581,7 @@
               <td data-label="Week"></td>
               <td data-label="Class #"></td>
               <td data-label="Date"></td>
-              <td data-label="Topic">📖
-                Paper 1: <a href="https://arxiv.org/abs/1607.00133">Deep Learning with
-                  Differential Privacy</a></td>
+              <td data-label="Topic">📖 Paper 1: <a href="https://arxiv.org/abs/1607.00133">Deep Learning with Differential Privacy</a></td>
               <td data-label="Notes"></td>
               <td data-label="Links/Slides/Assignments"></td>
             </tr>
@@ -544,8 +589,7 @@
               <td data-label="Week"></td>
               <td data-label="Class #"></td>
               <td data-label="Date"></td>
-              <td data-label="Topic">📖 Paper 2: <a href="https://arxiv.org/abs/2501.18914">Scaling Laws for Differentially Private
-                  Language Models</a></td>
+              <td data-label="Topic">📖 Paper 2: <a href="https://arxiv.org/abs/2501.18914">Scaling Laws for Differentially Private Language Models</a></td>
               <td data-label="Notes"></td>
               <td data-label="Links/Slides/Assignments"></td>
             </tr>
@@ -561,8 +605,7 @@
               <td data-label="Week"></td>
               <td data-label="Class #"></td>
               <td data-label="Date"></td>
-              <td data-label="Topic">📖 Paper 1: <a href="https://arxiv.org/abs/2305.15560">Differentially Private Synthetic Data via
-                  Foundation Model APIs 1: Images</a></td>
+              <td data-label="Topic">📖 Paper 1: <a href="https://arxiv.org/abs/2305.15560">Differentially Private Synthetic Data via Foundation Model APIs 1: Images</a></td>
               <td data-label="Notes"></td>
               <td data-label="Links/Slides/Assignments"></td>
             </tr>
@@ -570,8 +613,7 @@
               <td data-label="Week"></td>
               <td data-label="Class #"></td>
               <td data-label="Date"></td>
-              <td data-label="Topic">📖 Paper 2: <a href="https://arxiv.org/abs/1710.06963">Learning Differentially Private Recurrent
-                  Language Models</a></td>
+              <td data-label="Topic">📖 Paper 2: <a href="https://arxiv.org/abs/1710.06963">Learning Differentially Private Recurrent Language Models</a></td>
               <td data-label="Notes"></td>
               <td data-label="Links/Slides/Assignments"></td>
             </tr>
@@ -595,10 +637,7 @@
               <td data-label="Week"></td>
               <td data-label="Class #"></td>
               <td data-label="Date"></td>
-              <td data-label="Topic">📖
-                Paper 1: <a href="https://arxiv.org/abs/2310.07298">Beyond
-                  Memorization: Violating Privacy Via Inference with Large Language
-                  Models</a></td>
+              <td data-label="Topic">📖 Paper 1: <a href="https://arxiv.org/abs/2310.07298">Beyond Memorization: Violating Privacy Via Inference with Large Language Models</a></td>
               <td data-label="Notes"></td>
               <td data-label="Links/Slides/Assignments"></td>
             </tr>
@@ -606,8 +645,7 @@
               <td data-label="Week"></td>
               <td data-label="Class #"></td>
               <td data-label="Date"></td>
-              <td data-label="Topic">📖 Paper 2: <a href="https://arxiv.org/abs/2505.14549">Can Large Language Models Really Recognize Your
-                  Name?</a></td>
+              <td data-label="Topic">📖 Paper 2: <a href="https://arxiv.org/abs/2505.14549">Can Large Language Models Really Recognize Your Name?</a></td>
               <td data-label="Notes"></td>
               <td data-label="Links/Slides/Assignments"></td>
             </tr>
@@ -623,8 +661,7 @@
               <td data-label="Week"></td>
               <td data-label="Class #"></td>
               <td data-label="Date"></td>
-              <td data-label="Topic">📖 Paper 1: <a href="https://arxiv.org/abs/2310.17884">Can LLMs Keep a Secret? Testing Privacy
-                  Implications of Language Models via Contextual Integrity Theory</a></td>
+              <td data-label="Topic">📖 Paper 1: <a href="https://arxiv.org/abs/2310.17884">Can LLMs Keep a Secret? Testing Privacy Implications of Language Models via Contextual Integrity Theory</a></td>
               <td data-label="Notes"></td>
               <td data-label="Links/Slides/Assignments"></td>
             </tr>
@@ -632,8 +669,7 @@
               <td data-label="Week"></td>
               <td data-label="Class #"></td>
               <td data-label="Date"></td>
-              <td data-label="Topic">📖 Paper 2: <a href="https://arxiv.org/abs/2405.05175">AirGapAgent: Protecting Privacy-Conscious
-                  Conversational Agents</a></td>
+              <td data-label="Topic">📖 Paper 2: <a href="https://arxiv.org/abs/2405.05175">AirGapAgent: Protecting Privacy-Conscious Conversational Agents</a></td>
               <td data-label="Notes"></td>
               <td data-label="Links/Slides/Assignments"></td>
             </tr>
@@ -685,7 +721,6 @@
               <td data-label="Notes"></td>
               <td data-label="Links/Slides/Assignments"><strong>Assignment 3 due</strong><br></td>
             </tr>
-
             <tr class="week-color-1">
               <td data-label="Week">Week 7</td>
               <td data-label="Class #">12</td>
@@ -693,7 +728,7 @@
               <td data-label="Topic"><strong>Mid-Semester Project Presentations</strong></td>
               <td data-label="Notes"></td>
               <td data-label="Links/Slides/Assignments">Instructions</td>
-            </tr>            
+            </tr>
             <tr class="week-color-1">
               <td data-label="Week"></td>
               <td data-label="Class #">13</td>
@@ -717,13 +752,12 @@
               <td data-label="Topic">Security. Jailbreaks + Prompt injections</td>
               <td data-label="Notes"></td>
               <td data-label="Links/Slides/Assignments">Assignment 5 Release (Due 11/06)</td>
-            </tr>       
+            </tr>
             <tr class="reading-row week-color-2">
               <td data-label="Week"></td>
               <td data-label="Class #"></td>
               <td data-label="Date"></td>
-              <td data-label="Topic">📖 Paper 1: <a href="https://arxiv.org/abs/2307.15043">Universal and Transferable Adversarial Attacks
-                  on Aligned Language Models</a></td>
+              <td data-label="Topic">📖 Paper 1: <a href="https://arxiv.org/abs/2307.15043">Universal and Transferable Adversarial Attacks on Aligned Language Models</a></td>
               <td data-label="Notes"></td>
               <td data-label="Links/Slides/Assignments"></td>
             </tr>
@@ -731,24 +765,15 @@
               <td data-label="Week"></td>
               <td data-label="Class #"></td>
               <td data-label="Date"></td>
-              <td data-label="Topic">📖 Paper 2: <a href="https://arxiv.org/abs/2302.12173">Not what you've signed up for: Compromising
-                  Real-World LLM-Integrated Applications with Indirect Prompt Injection</a></td>
+              <td data-label="Topic">📖 Paper 2: <a href="https://arxiv.org/abs/2302.12173">Not what you've signed up for: Compromising Real-World LLM-Integrated Applications with Indirect Prompt Injection</a></td>
               <td data-label="Notes"></td>
               <td data-label="Links/Slides/Assignments"></td>
-            </tr>     
+            </tr>
             <tr class="week-color-2">
               <td data-label="Week"></td>
               <td data-label="Class #">15</td>
               <td data-label="Date">Wed, Oct 28</td>
               <td data-label="Topic">Security. Guest Lecture (Adversarial ML)</td>
-              <td data-label="Notes"></td>
-              <td data-label="Links/Slides/Assignments"></td>
-            </tr>
-            <tr class="week-color-2">
-              <td data-label="Week"></td>
-              <td data-label="Class #"></td>
-              <td data-label="Date">Fri, Oct 30</td>
-              <td data-label="Topic"></td>
               <td data-label="Notes"></td>
               <td data-label="Links/Slides/Assignments"></td>
             </tr>
@@ -764,8 +789,7 @@
               <td data-label="Week"></td>
               <td data-label="Class #"></td>
               <td data-label="Date"></td>
-              <td data-label="Topic">📖 Paper 1: <a href="https://arxiv.org/abs/2306.15447">Are aligned neural networks adversarially
-                  aligned?</a></td>
+              <td data-label="Topic">📖 Paper 1: <a href="https://arxiv.org/abs/2306.15447">Are aligned neural networks adversarially aligned?</a></td>
               <td data-label="Notes"></td>
               <td data-label="Links/Slides/Assignments"></td>
             </tr>
@@ -776,7 +800,6 @@
               <td data-label="Topic">📖 Paper 2: <a href="https://arxiv.org/abs/2407.08970">Self-interpreting Adversarial Images</a></td>
               <td data-label="Notes"></td>
               <td data-label="Links/Slides/Assignments"></td>
-              </td>
             </tr>
             <tr class="week-color-1">
               <td data-label="Week"></td>
@@ -814,8 +837,7 @@
               <td data-label="Week"></td>
               <td data-label="Class #"></td>
               <td data-label="Date"></td>
-              <td data-label="Topic">📖 Paper 1: <a href="https://arxiv.org/abs/2411.18479">SoK: Watermarking for AI-Generated Content</a>
-              </td>
+              <td data-label="Topic">📖 Paper 1: <a href="https://arxiv.org/abs/2411.18479">SoK: Watermarking for AI-Generated Content</a></td>
               <td data-label="Notes"></td>
               <td data-label="Links/Slides/Assignments"></td>
             </tr>
@@ -835,7 +857,6 @@
               <td data-label="Notes"></td>
               <td data-label="Links/Slides/Assignments"><strong>Assignment 6 due</strong></td>
             </tr>
-            
             <tr class="week-color-1">
               <td data-label="Week">Week 11</td>
               <td data-label="Class #">20</td>
@@ -848,22 +869,19 @@
               <td data-label="Week"></td>
               <td data-label="Class #"></td>
               <td data-label="Date"></td>
-              <td data-label="Topic">📖 Paper 1: <a href="https://arxiv.org/abs/2502.17424v2">Emergent Misalignment: Narrow finetuning can
-                  produce broadly misaligned LLMs</a></td>
+              <td data-label="Topic">📖 Paper 1: <a href="https://arxiv.org/abs/2502.17424v2">Emergent Misalignment: Narrow finetuning can produce broadly misaligned LLMs</a></td>
               <td data-label="Notes"></td>
               <td data-label="Links/Slides/Assignments"></td>
             </tr>
-            
-
-            <tr class="week-color-1">
+            <tr class="week-color-2">
               <td data-label="Week">Week 12</td>
-              <td data-label="Class #">22</td>
+              <td data-label="Class #">21</td>
               <td data-label="Date">Wed, Nov 18</td>
               <td data-label="Topic">Security. Principled Defenses</td>
               <td data-label="Notes"></td>
               <td data-label="Links/Slides/Assignments"></td>
             </tr>
-            <tr class="reading-row week-color-1">
+            <tr class="reading-row week-color-2">
               <td data-label="Week"></td>
               <td data-label="Class #"></td>
               <td data-label="Date"></td>
@@ -871,7 +889,7 @@
               <td data-label="Notes"></td>
               <td data-label="Links/Slides/Assignments"></td>
             </tr>
-            <tr class="reading-row week-color-1">
+            <tr class="reading-row week-color-2">
               <td data-label="Week"></td>
               <td data-label="Class #"></td>
               <td data-label="Date"></td>
@@ -879,7 +897,7 @@
               <td data-label="Notes"></td>
               <td data-label="Links/Slides/Assignments"></td>
             </tr>
-            <tr class="week-color-1">
+            <tr class="week-color-2">
               <td data-label="Week"></td>
               <td data-label="Class #"></td>
               <td data-label="Date">Fri, Nov 20</td>
@@ -887,11 +905,9 @@
               <td data-label="Notes"></td>
               <td data-label="Links/Slides/Assignments"><strong>Assignment 7 due</strong></td>
             </tr>
-
-
             <tr class="week-color-2">
               <td data-label="Week"></td>
-              <td data-label="Class #">21</td>
+              <td data-label="Class #">22</td>
               <td data-label="Date">Mon, Nov 23</td>
               <td data-label="Topic">Environmental. Overthinking</td>
               <td data-label="Notes"></td>
@@ -901,8 +917,7 @@
               <td data-label="Week"></td>
               <td data-label="Class #"></td>
               <td data-label="Date"></td>
-              <td data-label="Topic">📖 Paper 1: <a href="https://arxiv.org/abs/2502.02542">OverThink: Slowdown Attacks on Reasoning
-                  LLMs</a></td>
+              <td data-label="Topic">📖 Paper 1: <a href="https://arxiv.org/abs/2502.02542">OverThink: Slowdown Attacks on Reasoning LLMs</a></td>
               <td data-label="Notes"></td>
               <td data-label="Links/Slides/Assignments"></td>
             </tr>
@@ -930,7 +945,6 @@
               <td data-label="Notes"></td>
               <td data-label="Links/Slides/Assignments"><strong>Assignment 8 due</strong></td>
             </tr>
-
             <tr class="week-color-1">
               <td data-label="Week">Week 13</td>
               <td data-label="Class #">24</td>
@@ -943,12 +957,10 @@
               <td data-label="Week"></td>
               <td data-label="Class #"></td>
               <td data-label="Date"></td>
-              <td data-label="Topic">📖 Paper 1: <a href="https://arxiv.org/abs/1905.12101">Differential Privacy Has Disparate Impact on
-                  Model Accuracy</a></td>
+              <td data-label="Topic">📖 Paper 1: <a href="https://arxiv.org/abs/1905.12101">Differential Privacy Has Disparate Impact on Model Accuracy</a></td>
               <td data-label="Notes"></td>
               <td data-label="Links/Slides/Assignments"></td>
             </tr>
-
             <tr class="week-color-1">
               <td data-label="Week"></td>
               <td data-label="Class #">25</td>
@@ -965,7 +977,6 @@
               <td data-label="Notes"></td>
               <td data-label="Links/Slides/Assignments"></td>
             </tr>
-
             <tr class="week-color-2">
               <td data-label="Week">Week 14</td>
               <td data-label="Class #">26</td>
@@ -1006,7 +1017,6 @@
               <td data-label="Notes"></td>
               <td data-label="Links/Slides/Assignments"><strong>Poster due</strong></td>
             </tr>
-
             <tr class="week-color-1">
               <td data-label="Week">Week 15</td>
               <td data-label="Class #">28</td>
@@ -1015,10 +1025,9 @@
               <td data-label="Notes"></td>
               <td data-label="Links/Slides/Assignments"></td>
             </tr>
-
             <tr class="week-color-2">
               <td data-label="Week">Week 16</td>
-              <td data-label="Class #">28</td>
+              <td data-label="Class #"></td>
               <td data-label="Date">Wed, Dec 23</td>
               <td data-label="Topic"><strong>Final Project Report Due (Last day of semester)</strong></td>
               <td data-label="Notes"></td>
@@ -1029,35 +1038,53 @@
         </div>
       </div>
 
+            <h2 class="title is-4 mt-5" id="groups">Groups</h2>
+      <div class="content">
+        <ul>
+          <li>Each group will consist of ~4 people</li>
+          <li>Groups will be formed in Week 3, after add/drop</li>
+          <li>Unless you have any specific requests, group members will be set up by the course staff</li>
+          <li>Each group will do the assignments and final project together</li>
+        </ul>
+        <p>Please contact the course staff if you have any issues or concerns with your group.</p>
+      </div>
+
             <h2 class="title is-4 mt-5" id="assignments">Assignments</h2>
 
       <div class="content">
-        <h3 class="title is-5 mt-4">All Assignments Overview</h3>
+        <h3 class="title is-5 mt-4">All Assignments Overview (ordering and topic subject to change)</h3>
         <ol>
-          <li>Build synthetic data + Show attacks (MIA or data extraction) → reconstruction</li>
-          <li>Implement Federated Learning</li>
-          <li>Implement Differential Privacy and Private Evolution</li>
-          <li>Contextual Integrity & PII Filtering: PII filtering/extraction; contextual integrity → airgap, context hijacking</li>
-          <li>Jailbreaking and prompt injections</li>
-          <li>Multi-modal attacks</li>
-          <li>Backdoors and watermarking </li>
-          <li>Alignment attacks + RLHF</li>
+          <li>Membership Inference Attack</li>
+          <li>Federated Learning</li>
+          <li>Differential Privacy and Private Evolution</li>
+          <li>Contextual Integrity & PII Filtering</li>
+          <li>Jailbreaking and Prompt Injections</li>
+          <li>Multi-modal Attacks</li>
+          <li>Backdoors and Watermarking</li>
+          <li>Alignment attacks</li>
         </ol>
         <h3 class="title is-5 mt-4">Assignment Process</h3>
         <div class="content">
-          <ol>
-            <li><strong>Create your repository:</strong> Each team must create a repository on GitHub.</li>
-            <li><strong>Share access:</strong> Add the teaching staff as collaborators.</li>
+          <ul>
+            <li><strong>GitHub repository:</strong> Each team will be added to their own private repo at <a
+                href="https://github.com/cs684-umass" target="_blank">github.com/cs684-umass</a>.</li>
             <li><strong>Roles:</strong>
               <ul>
                 <li>One <em>lead author</em> writes the report and conducts the main experiments.</li>
-                <li>Other team members advise and consult.</li>
+                <li>Other team members help the lead.</li>
                 <li>The lead author receives <strong>80%</strong> of the grade, other members receive
                   <strong>20%</strong>.
                 </li>
               </ul>
             </li>
-          </ol>
+            <li><strong>Submission:</strong>
+              <ul>
+                <li>PDF report needs to be submitted to Gradescope</li>
+                <li>Code needs to be put in your assigned GitHub repo</li>
+                <li>Presentation slides need to be added to the shared Google Slide (link in Canvas)</li>
+              </ul>
+            </li>
+          </ul>
 
           <h4 class="title is-6 mt-4">Structure of Each Assignment</h4>
           <ul>
@@ -1065,69 +1092,24 @@
               <br><em>Include key discussion points from class as well.</em>
             </li>
             <li><strong>Code:</strong> Implement the required attacks/defenses, include documentation and results.</li>
-            <li><strong>Presentation:</strong> Prepare a short slide deck summarizing your findings.</li>
+            <li><strong>Presentation:</strong> Prepare a short slide deck (max 1 slide) highlighting your findings.</li>
           </ul>
 
           <h4 class="title is-6 mt-4">Deadlines & Presentations</h4>
           <ul>
-            <li><strong>Due:</strong> Slide deck, reading report, and code are due <em>Friday of that week, 11:59 PM
-                EST</em>.</li>
-            <li><strong>Presentation:</strong> Happens at the beginning of the <em>following week’s class</em>.</li>
+            <li><strong>Due:</strong> Slide deck, reading report, and code are due <em>Friday, 11:59 PM EST</em>.</li>
+            <li><strong>Presentation:</strong> The following week. <em>1-minute max per team.</em></li>
           </ul>
         </div>
       </div>
 
+      <h2 class="title is-4 mt-5" id="final-project">Final Project</h2>
+      <div class="content">
+        <p>More details to come soon.</p>
+      </div>
+
       <!-- POLICIES SECTION -->
       <h2 class="title is-4 mt-6" id="policies">Course Policies</h2>
-
-
-      <div class="box policy-box p-5 mb-5">
-        <h3 class="title is-5 mb-3" id="grade-scale">Course Grade Scale</h3>
-        <div class="content">
-          <table class="table is-striped is-fullwidth grade-scale">
-            <thead>
-              <tr>
-                <th>Grade</th>
-                <th>Range</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>A</td>
-                <td>93-100</td>
-              </tr>
-              <tr>
-                <td>A-</td>
-                <td>90-92</td>
-              </tr>
-              <tr>
-                <td>B+</td>
-                <td>87-89</td>
-              </tr>
-              <tr>
-                <td>B</td>
-                <td>83-86</td>
-              </tr>
-              <tr>
-                <td>B-</td>
-                <td>80-82</td>
-              </tr>
-              <tr>
-                <td>C+</td>
-                <td>77-79</td>
-              </tr>
-              <tr>
-                <td>C</td>
-                <td>73-76</td>
-              </tr>
-              <tr>
-                <td>F</td>
-                <td>0-72</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-      </div>
 
 
       <div class="box policy-box p-5 mb-5">
@@ -1223,7 +1205,7 @@
   </section>
   <footer class="footer">
     <div class="content has-text-centered">
-      <p>© UMass Amherst • CS684 Trustworthy and Responsible AI • Last updated August 2026</p>
+      <p>© UMass Amherst • CS684 Trustworthy and Responsible AI • Last updated September 2026</p>
     </div>
   </footer>
   <script>
